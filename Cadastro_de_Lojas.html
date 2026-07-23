@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Cadastro de Lojas — Rota Norte</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFXUlEQVR4nMWXXYxdVRXHf2vtc86999yZOx/9xIIV0jBYFEkDiR/RWM0QkYf2pdU+VBQDiUaa6EMJPJkAMWliCBgfjLE+GKzUl/GjKvUB+iTQRED60oBhGjp0OtDOnZl7z/06Zy8fzp2ZzrQ9bWmJ/2Tfc7M/zvrvtf9rrX0E4PAu3O4/kv1u+yfGxjZUfhyH7hsissnAAcL1wQQyM5tKetk/Tp5tPbP3pfdPLtqUxT9Hd37q4VtHygdGyuFwakbqr9PsKgQKgQiz7V793dn2/vsmJn99eBdOAP65c/NDd28c/E2G0Ml8hqEi173zFTDDEHzJqXMYb0wvfH984tRBOXzfzVs+s7H65po4LLdSQwW9kYZXwxu+Egjnkl77xHTzc7ppONq/vhrF7czs4zYOoIK2M7P11SjeNBzt1zh0D6Rmhn38xpdgaGpmcegeCALVjalH5IaeeDFEkNRDoLoxkCK3X4qV2aXn2NLP4sByAK9es7xUg0KqWYqZIf1Xiwioy5vPVs5RB6rLxizDMr+85jIoIGBIXEMXF5uBGT6Zw7cW0LgGZvlTHdZJsF4HXADeI6UYDSLwGb7dvEYColgnYd0Pf0F0+z1ghoQR1uuSfniaxku/p3HsBcSFrPnBs0Sbt5JOT3L2wN6cZKvByM59DGzfQ3fyBDM//x4SRJc8igLlGxIPonENiUr4ZB4JS0Sb72T0u09T/fwOfDKPq42icY3otrsY2rkPn8yDSu6BuJZ7qACFoWdpF8xIjr/I1E++wvuPfZ3O2/8G88Rf3AEIlmV5mvMZg+MPUt76BSxZyAVoBln60QnkShas2yarnyU9O4lv1sFWVSgRSLuICxjd+1MIIvA+779CfBdGgUjOr/LZL7Ph8UO4kQ2UtmwDoPnKXwADy6tW8uoRwk9+mmjzndS++TC+MVu8tz6KPdBn74bXE997P6Ut28jqM5z/7RM0//UnpDK45OL0/Blmn38SgKEd+yjdfk//HcUmijXQj/XGsReYm3gu70t7NF/9K7IqhejgKMnxv5O89jfc0FrKW7/UH7gOAnifJxwR5o/8Ct+oE6zdxMi3Hscnc3nyWZyTpUgpZvbQ02RzH+bkfZaPfzQChlQGQB1aW0v6wXvMv3gQgIHte6hsG8e3FpDqEKhDwhISRmTnzlD/w88QF+T9lYFCApcRoYEGtP9zjOz8GTonX0Nra2i8fIhg3S1oPEh08xitN1+m/dYx0ul36U6eQMSh1RrNV/5MeMsdhDfdRjpzqlAHcuI7YzZcDvEXZSnJ06tPERcipQp4j2838jAMIyQqY+0m5j0ShEhU7mc76c/La4SUKhe7XoR6u3eFWlCuon0RWZaCC3CDa/rDHlusBYCZLRco7IIMaIU6KK6GGL6TYN02GtewZB7vMy6os0hYAu8x82hlYDnfL5EpxuUJiGKtBcp3f43Br36bD375Iwa278ENrVs2okrn5HGiW+9Ca6PMPv8UOjB0ReVfHQEAdfjmHN2ptxFROv99A4kqLF08RMnOTeFGNuDbDcS5lXeSq4C8tXcsG6mEerEIWaoD1mmhA8N5vV+9uyDM+80v3RGuBirCbKvng9T76UC5qZPmd7UVs8yQqIyUYvBZrvLV6EcEcNWuN8MCB6n305r0siOBiCBcevWF6u7fila0RZVfw7kj+EBEkl52RKfq3QMzzW5SdiLeLkPiBsIbvuxEZprdZKrePaC7j55+Z2q+/aiClgNVg8zsWqV0ZZjl15NyoKqgU/PtR3cfPf2OHt6FG584dfD16cYjC51evRqoKwUiKsKNbKVApBqoW+j06q9PNx4Znzh1cOnj9P/5ef4/aAiLrk6VY+MAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Rota Norte">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#E2652B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2B2420;
+    --title:#C1481B;
+    --bg:#FBF6F1;
+    --surface:#FFFFFF;
+    --accent:#E2652B;
+    --accent-dark:#B84F1F;
+    --accent-soft:#FBEAE0;
+    --warn:#B23A3A;
+    --warn-dark:#8C2E2E;
+    --line:#EAE0D5;
+    --muted:#8A7A6E;
+    --font-body:12px;
+    --font-sub:10px;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    font-size:var(--font-body);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Sora',sans-serif;margin:0;color:var(--title);}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  button{font-family:inherit;cursor:pointer;}
+  input,select,textarea{font-family:inherit;font-size:var(--font-body);}
+
+  .app-shell{max-width:960px;margin:0 auto;padding:0 0 64px;}
+
+  .app-bar{
+    background:var(--ink);
+    color:#F5E9DD;
+    padding:18px 20px 14px;
+    position:sticky;top:0;z-index:20;
+  }
+  .app-bar .title-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;}
+  .app-bar h1{font-size:19px;color:#fff;letter-spacing:0.2px;}
+  .app-bar .subtitle{font-size:var(--font-sub);color:#E7BE9C;text-transform:uppercase;letter-spacing:0.08em;}
+  .sync-note{font-size:var(--font-sub);color:#D9B79A;margin-top:6px;max-width:640px;}
+
+  .tabs{
+    display:flex;gap:10px;padding:14px 20px;background:var(--surface);
+    border-bottom:1px solid var(--line);
+    align-items:center;position:relative;flex-wrap:wrap;
+  }
+  .segmented{
+    display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;
+  }
+  .segmented .seg-btn{
+    background:transparent;border:none;color:var(--muted);
+    padding:8px 16px;font-size:var(--font-body);font-weight:600;border-radius:999px;
+    white-space:nowrap;
+  }
+  .segmented .seg-btn.active{background:var(--accent);color:#fff;}
+
+  .menu-wrap{position:relative;margin-left:auto;}
+  .hamburger-btn{
+    background:var(--surface);border:1px solid var(--line);color:var(--ink);
+    padding:8px 14px;font-size:12px;font-weight:600;border-radius:999px;
+    white-space:nowrap;display:flex;align-items:center;gap:6px;
+  }
+  .hamburger-btn.active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-dark);}
+  .hamburger-btn .bars{font-size:15px;line-height:1;}
+  .hamburger-btn .cur{font-size:var(--font-sub);font-weight:600;color:var(--accent-dark);}
+  .dropdown-menu{
+    position:absolute;top:calc(100% + 8px);right:0;background:var(--surface);
+    border:1px solid var(--line);border-radius:12px;
+    box-shadow:0 14px 30px rgba(43,36,32,0.16);min-width:230px;z-index:50;
+    overflow:hidden;padding:6px;
+  }
+  .dropdown-group-label{
+    font-size:9px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);
+    font-weight:700;padding:10px 10px 4px;
+  }
+  .dropdown-menu button{
+    display:block;width:100%;text-align:left;background:none;border:none;
+    padding:9px 10px;font-size:var(--font-body);color:var(--ink);border-radius:8px;
+  }
+  .dropdown-menu button:hover{background:var(--accent-soft);}
+  .dropdown-menu button.active{color:var(--accent-dark);font-weight:700;background:var(--accent-soft);}
+  .dropdown-divider{height:1px;background:var(--line);margin:6px 4px;}
+
+  main{padding:18px 20px 40px;}
+
+  .card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 16px 18px;
+    margin-bottom:14px;
+  }
+  .section-title{
+    font-size:var(--font-sub);
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--title);
+    font-weight:700;
+    margin-bottom:10px;
+    display:flex;align-items:center;gap:8px;
+    font-family:'Sora',sans-serif;
+  }
+  .section-title::before{
+    content:"";width:14px;height:2px;background:var(--accent);display:inline-block;
+  }
+
+  .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;}
+  .field-grid.single{grid-template-columns:1fr;}
+  @media(max-width:640px){.field-grid{grid-template-columns:1fr;}}
+
+  .field label{
+    display:block;font-size:var(--font-sub);color:var(--muted);
+    margin-bottom:4px;font-weight:600;letter-spacing:0.02em;
+  }
+  .field input[type=text],.field input[type=tel],.field input[type=email],
+  .field input[type=date],.field select,.field textarea{
+    width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:7px;
+    background:#FFFCF9;color:var(--ink);
+  }
+  .field textarea{resize:vertical;min-height:56px;}
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);
+  }
+  .field.required label::after{content:" *";color:var(--warn);}
+
+  .addr-row{display:flex;gap:8px;align-items:flex-start;}
+  .addr-row textarea{flex:1;}
+  .btn{
+    border:none;border-radius:7px;padding:8px 14px;font-size:var(--font-body);
+    font-weight:600;display:inline-flex;align-items:center;gap:6px;
+  }
+  .btn-accent{background:var(--accent);color:#fff;}
+  .btn-accent:hover{background:var(--accent-dark);}
+  .btn-outline{background:transparent;border:1px solid var(--line);color:var(--ink);}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent-dark);}
+  .btn-warn{background:#fff;border:1px solid var(--warn);color:var(--warn);}
+  .btn-warn:hover{background:var(--warn);color:#fff;}
+  .btn-sm{padding:6px 10px;font-size:var(--font-sub);}
+  .btn:disabled{opacity:0.55;cursor:not-allowed;}
+
+  .btn-confirm-addr{white-space:nowrap;}
+  .spinner{
+    width:12px;height:12px;border-radius:50%;
+    border:2px solid rgba(255,255,255,0.4);border-top-color:#fff;
+    animation:spin .7s linear infinite;display:inline-block;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  .photo-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px;align-items:flex-start;}
+  .photo-thumb{
+    position:relative;width:74px;height:74px;border-radius:8px;overflow:hidden;
+    border:1px solid var(--line);background:#eee;flex:none;
+  }
+  .photo-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .photo-thumb .rm{
+    position:absolute;top:2px;right:2px;background:rgba(22,50,58,0.75);color:#fff;
+    border:none;border-radius:50%;width:18px;height:18px;font-size:11px;line-height:1;
+  }
+  /* Initial photo field: a clearly visible rectangular upload box */
+  .photo-placeholder{
+    width:100%;max-width:230px;min-height:96px;border-radius:10px;
+    border:1.5px dashed var(--accent);background:#FBEAE0;color:var(--accent-dark);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:4px;text-align:center;padding:14px;flex:none;
+  }
+  .photo-placeholder:hover{background:#F6D9C7;}
+  .photo-placeholder .ic{font-size:22px;line-height:1;}
+  .photo-placeholder .txt{font-size:var(--font-sub);font-weight:600;}
+  /* Circular add button: shown beside existing photos to add more, no limit */
+  .photo-add-round{
+    width:40px;height:40px;border-radius:50%;border:1.5px dashed var(--accent);
+    background:#FBEAE0;color:var(--accent-dark);display:flex;align-items:center;
+    justify-content:center;font-size:20px;font-weight:700;flex:none;align-self:center;
+  }
+  .photo-add-round:hover{background:#F6D9C7;}
+  .photo-label{font-size:var(--font-sub);color:var(--muted);margin-bottom:6px;font-weight:600;}
+
+  .form-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:6px;flex-wrap:wrap;}
+
+  /* Manifest-style tag chips (signature element) */
+  .tag-chip{
+    display:inline-flex;align-items:center;gap:6px;
+    border:1px dashed var(--line);border-radius:6px;padding:3px 8px 3px 6px;
+    font-size:var(--font-sub);color:var(--muted);background:#FBF7F3;
+  }
+  .tag-chip .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex:none;}
+  .tag-chip.mono span{font-family:'IBM Plex Mono',monospace;color:var(--ink);}
+
+  .search-box{display:flex;gap:8px;margin-bottom:12px;}
+  .search-box input{flex:1;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:var(--font-body);}
+  .result-list{display:flex;flex-direction:column;gap:6px;max-height:340px;overflow-y:auto;}
+  .result-item{
+    display:flex;justify-content:space-between;align-items:center;gap:8px;
+    padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;
+    text-align:left;width:100%;
+  }
+  .result-item:hover{border-color:var(--accent);}
+  .result-item .name{font-weight:600;}
+  .result-item .meta{color:var(--muted);font-size:var(--font-sub);}
+
+  .empty-state{
+    text-align:center;padding:36px 16px;color:var(--muted);
+  }
+  .empty-state .big{font-size:28px;margin-bottom:8px;}
+
+  .ficha-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;}
+  @media(max-width:640px){.ficha-grid{grid-template-columns:1fr;}}
+  .ficha-item .k{font-size:var(--font-sub);color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;}
+  .ficha-item .v{font-size:var(--font-body);color:var(--ink);margin-top:2px;word-break:break-word;}
+  .ficha-item .v.empty{color:#B8ACA0;font-style:italic;}
+  .ficha-header{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+  .ficha-header h2{font-size:17px;}
+  .ficha-header .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;}
+  .ficha-photos{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;}
+  .ficha-photos img{width:74px;height:74px;object-fit:cover;border-radius:8px;border:1px solid var(--line);}
+
+  .list-manager-add{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+  .list-manager-add input{flex:1;min-width:140px;padding:9px 11px;border:1px solid var(--line);border-radius:7px;}
+  .list-manager-items{display:flex;flex-direction:column;gap:6px;}
+  .list-manager-row{
+    display:flex;justify-content:space-between;align-items:center;gap:8px;
+    padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;
+  }
+  .list-manager-row .txt{font-size:var(--font-body);}
+  .list-manager-row .sub{font-size:var(--font-sub);color:var(--muted);font-family:'IBM Plex Mono',monospace;}
+
+  .toast{
+    position:fixed;bottom:18px;left:50%;transform:translateX(-50%);
+    background:var(--ink);color:#fff;padding:10px 16px;border-radius:8px;
+    font-size:var(--font-body);z-index:100;box-shadow:0 6px 18px rgba(0,0,0,0.2);
+    opacity:0;pointer-events:none;transition:opacity .2s ease, transform .2s ease;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(-4px);}
+
+  .modal-overlay{
+    position:fixed;inset:0;background:rgba(22,50,58,0.45);
+    display:flex;align-items:center;justify-content:center;z-index:200;padding:20px;
+  }
+  .modal-box{
+    background:#fff;border-radius:12px;padding:20px;max-width:340px;width:100%;
+  }
+  .modal-box p{font-size:var(--font-body);margin:0 0 16px;}
+  .modal-actions{display:flex;justify-content:flex-end;gap:8px;}
+
+  .stat-strip{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px;}
+  .stat-pill{
+    background:var(--surface);border:1px solid var(--line);border-radius:8px;
+    padding:8px 12px;display:flex;flex-direction:column;gap:2px;min-width:88px;
+  }
+  .stat-pill .n{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:var(--ink);}
+  .stat-pill .l{font-size:var(--font-sub);color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;}
+
+  .helptext{font-size:var(--font-sub);color:var(--muted);margin-top:4px;}
+
+  /* Equipamentos (máquinas / balança) */
+  .equip-block{grid-column:1/-1;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#FFFCF9;}
+  .equip-block label{margin-bottom:6px;}
+  .equip-block select.possui{max-width:160px;}
+  .equip-details{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;}
+  .equip-details select{flex:1;min-width:130px;padding:8px 10px;border:1px solid var(--line);border-radius:7px;}
+  .equip-details input[type=number]{width:120px;padding:8px 10px;border:1px solid var(--line);border-radius:7px;}
+
+  /* Serviços */
+  .servico-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+  .servico-row .field{flex:1;min-width:150px;}
+  .servico-list-item{
+    display:flex;justify-content:space-between;align-items:flex-start;gap:10px;
+    padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;margin-bottom:6px;
+  }
+  .servico-list-item .main{font-weight:600;}
+  .servico-list-item .meta{font-size:var(--font-sub);color:var(--muted);margin-top:2px;}
+  .servico-list-item .notas{font-size:var(--font-sub);color:var(--ink);margin-top:4px;font-style:italic;}
+
+  /* Relatório de Máquinas */
+  .report-table{width:100%;border-collapse:collapse;font-size:var(--font-body);}
+  .report-table th,.report-table td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);}
+  .report-table th{font-size:var(--font-sub);text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
+  .report-table td.num{text-align:right;font-family:'IBM Plex Mono',monospace;}
+  .report-total-row td{font-weight:700;border-top:2px solid var(--ink);border-bottom:none;}
+
+  @media print{
+    .app-bar, .tabs, .no-print{display:none !important;}
+    body{background:#fff;}
+    .app-shell{max-width:100%;}
+    main{padding:0;}
+    .card{border:none;padding:0;margin-bottom:18px;}
+  }
+  .print-title{display:none;}
+  @media print{ .print-title{display:block;font-size:16px;margin-bottom:10px;font-family:'Sora',sans-serif;} }
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <div class="app-bar">
+    <div class="title-row">
+      <h1>Cadastro de Lojas</h1>
+      <span class="subtitle">Rota Norte · Belém / Pará</span>
+    </div>
+  </div>
+  <div class="tabs" id="tabs"></div>
+  <main id="content"></main>
+</div>
+<div class="toast" id="toast"></div>
+<div id="modalRoot"></div>
+
+<script>
+/* ===================== SEED DATA ===================== */
+const SEED_CLIENTES = [{"id": "0203f89c", "cliente": "JC REBOQUE", "nomeFantasia": "", "classificacao": "Potencial", "municipio": "Ananindeua", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "Passagem Jiboia Branca, 5 - Jibóia Branca, Ananindeua - PA, 67120-510, Brasil", "fixo": "", "celular": "(91) 99810-6701", "celularII": "", "emailLoja": "", "emailNF": "", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "2024-09-20", "administrador": "", "anivAdm": "2024-09-20", "codLj": "0", "rota": "Ananindeua / Grd Belem - A1.2", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/0203f89c.Imagem_Int.132600.jpg"}, {"id": "0928bb2f", "cliente": "Arildon e Talis", "nomeFantasia": "", "classificacao": "Potencial", "municipio": "Vigia", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "2024-06-27", "administrador": "", "anivAdm": "2024-06-27", "codLj": "0", "rota": "", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "3883aea9", "cliente": "CARTINTAS - BR", "nomeFantasia": "CARTINTAS", "classificacao": "Ativo - TOP 10", "municipio": "Ananindeua", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "BR-316, Km 08 - Centro, Ananindeua - PA, 67030-970, Brasil", "fixo": "", "celular": "(91) 98414-4521", "celularII": "", "emailLoja": "", "emailNF": "", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "2001-01-01", "administrador": "", "anivAdm": "2001-01-01", "codLj": "0", "rota": "Ananindeua / Grd Belem - A1.2", "mimo": "Genivaldo/ Cristiano/ Adriano/ ??? - 1 Caderno, 3 Canetas, 1 Clen Parede, 1 Chaveiro ($ 15,00 * 4= $ 60,00)", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/3883aea9.Imagem_Int.141751.jpg"}, {"id": "9187677e", "cliente": "38.013.160 LEANDRO TORRES BARCELAU", "nomeFantasia": "BARCELAU TINTAS", "classificacao": "Potencial", "municipio": "Nova Esperança do Piria", "regiao": "207", "cnpj": "38.013.160/0001-48", "inscEstadual": "15.709.333-6", "endereco": "R. Raimundo da Conceição, Nova Esperança do Piriá - PA, 68618-000, Brasil", "fixo": "", "celular": "(91) 98628-9028", "celularII": "", "emailLoja": "barcelautintas@gmail.com", "emailNF": "", "proprietario": "LEANDRO TORRES BARCELAU", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Nova Esperança do Piria / Capitao Poco - G1.2", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/9187677e.Vista_Externa.195019.jpg"}, {"id": "96a81994", "cliente": "51.665.523 LTDA ( O ANJO DAS TINTAS - CASTANHAL)", "nomeFantasia": "O ANJO DAS TINTAS", "classificacao": "Potencial", "municipio": "Castanhal", "regiao": "207", "cnpj": "51.665.523/0001-98", "inscEstadual": "15.909.278-7", "endereco": "R. Cmte. Francisco de Assis, 484 - Nova Olinda, Castanhal - PA, 68742-430, Brasil", "fixo": "", "celular": "(91) 98538-3241", "celularII": "", "emailLoja": "souzatintasautos@gmail.com", "emailNF": "souzatintasautos@gmail.com", "proprietario": "ERINALDO DE SOUZA E SOUZA", "cpfProp": "787.814.702-91", "identProp": "06236 - MTE-PA", "anivProp": "1984-06-14", "administrador": "KLISMANN EDBERTO MONTEIRO GONÇALVES DE ARAUJO VAZ", "anivAdm": "1994-03-27", "codLj": "0", "rota": "Castanhal / Castanhal - C1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN108", "cliente": "MONTE SINAI", "nomeFantasia": "MONTE SINAI", "classificacao": "Potencial", "municipio": "Belem", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "SN Próximo ao Posto Iccar - BR-316, Km 0 - Castanheira, Belém - PA, 66645-003, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN108.Vista_Externa.133511.jpg"}, {"id": "CL34EN122", "cliente": "PAVÃO AUTO TINTAS LTDA - Mz", "nomeFantasia": "ZECA TINTAS", "classificacao": "Potencial - Preferencia outra marca", "municipio": "Belem", "regiao": "220", "cnpj": "02.218.134/0001-09", "inscEstadual": "15.195.879-3", "endereco": "Tv. Padre Eutíquio, 2540 - Campina, Belém - PA, 66033-728, Brasil", "fixo": "(91) 3272-6242", "celular": "(91) 32720-854", "celularII": "", "emailLoja": "pavaopedidos@gmail.com", "emailNF": "pavaopedidos@gmail.com", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN122.Vista_Externa.133537.jpg"}, {"id": "CL34EN144", "cliente": "TON DAS TINTAS", "nomeFantasia": "TON DAS TINTAS", "classificacao": "Potencial - Preferencia outra marca", "municipio": "Belem", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "Tv. Vileta, 1418 - Pedreira, Belém - PA, 66087-423, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN144.Vista_Externa.133605.jpg"}, {"id": "CL34EN22", "cliente": "ABREU TINTAS - FARBEN", "nomeFantasia": "ABREU TINTAS - FARBEN", "classificacao": "Representante Farben", "municipio": "Belem", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": ",,,Pará", "fixo": "", "celular": "", "celularII": "", "emailLoja": "a@a", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN38", "cliente": "C K P COELHO", "nomeFantasia": "COELHO TINTAS", "classificacao": "Potencial - Preferencia outra marca", "municipio": "Ananindeua", "regiao": "220", "cnpj": "07.554.461/0001-55", "inscEstadual": "", "endereco": "Est. da Providência, 444 - Cidade Nova, Ananindeua - PA, 67140-440, Brasil", "fixo": "(91) 3263-1121", "celular": "", "celularII": "", "emailLoja": "ckpcoelho@gmail.com", "emailNF": "ckpcoelho@gmail.com", "proprietario": "CARLA KATIANA PASTANA COELHO", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN38.Vista_Externa.133146.jpg"}, {"id": "CL34EN46", "cliente": "COELHO TINTAS", "nomeFantasia": "COELHO TINTAS", "classificacao": "Potencial - Preferencia outra marca", "municipio": "Belem", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "Av. Júlio César, 43 - Souza, Belém - PA, 66613-010, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN52", "cliente": "DISMONZA", "nomeFantasia": "DISMONZA", "classificacao": "Potencial - Preferencia outra marca", "municipio": "Belem", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "Av. Duque de Caxias, 500 - Fátima, Belém - PA, 66093-026, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "Fernando - Gerente Loja", "anivAdm": "", "codLj": "0", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN52.Vista_Externa.133347.jpg"}, {"id": "CL34EN54", "cliente": "E B DA SILVA COM DE TINTAS E MAT DE CONSTRUÇÃO", "nomeFantasia": "FORTINTAS", "classificacao": "Potencial - Preferencia outra marca", "municipio": "Belem", "regiao": "220", "cnpj": "05.920.005/0001-56", "inscEstadual": "", "endereco": "R. Oito de Maio, 907 - Campina de Icoaraci, Belém - PA, 66813-085, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN54.Vista_Externa.145919.jpg"}, {"id": "de0e6364", "cliente": "Oficina Trevo", "nomeFantasia": "", "classificacao": "", "municipio": "Castanhal", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "2026-03-17", "administrador": "", "anivAdm": "2026-03-17", "codLj": "0", "rota": "Castanhal / Castanhal - C1", "mimo": "sim", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "e71f02e1", "cliente": "BIKE TINTAS - Vila dos Cabanos", "nomeFantasia": "", "classificacao": "Inativo - Compra c/outro CNPJ", "municipio": "Barcarena", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "R. Germano Aranha, 45-32 - Murucupi, Barcarena - PA, 68445-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "0", "rota": "Vila dos Cabanos / Abaetetuba - M1.1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/e71f02e1.Vista_Externa.231550.jpg"}, {"id": "ec270543", "cliente": "TENONE CASA E CONSTRUÇÃO", "nomeFantasia": "Tenone", "classificacao": "Potencial", "municipio": "Belem", "regiao": "220", "cnpj": "", "inscEstadual": "", "endereco": "R. Alacid Nunes, 120 - Tenoné, Belém - PA, 66820-020, Brasil", "fixo": "9132782807", "celular": "91988943570", "celularII": "", "emailLoja": "", "emailNF": "", "proprietario": "João", "cpfProp": "", "identProp": "", "anivProp": "2024-10-23", "administrador": "Max", "anivAdm": "2024-10-23", "codLj": "0", "rota": "", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/ec270543.Imagem_Int.132319.jpg"}, {"id": "CL34EN32", "cliente": "AUTO PEÇAS LIDER LTDA - ME", "nomeFantasia": "LIDER", "classificacao": "Inativo - Preferencia outra Marca", "municipio": "Belem", "regiao": "220", "cnpj": "10.250.900/0001-40", "inscEstadual": "15.120.697-0", "endereco": "R. dos Mundurucus, 4715 - Guamá, Belém - PA, 66063-023, Brasil", "fixo": "(91) 3274-0302", "celular": "(91) 33833-629", "celularII": "", "emailLoja": "aplider@hotmail.com", "emailNF": "nfeaplider@hotmail.com", "proprietario": "JOSÉ MILTON DA SILVA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "509", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN32.Vista_Externa.224919.jpg"}, {"id": "CL34EN50", "cliente": "D F DA LUZ SILVA", "nomeFantasia": "AUTO TINTAS RETOK", "classificacao": "Inativo - Preferencia outra Marca", "municipio": "Belem", "regiao": "220", "cnpj": "05.802.603/0001-20", "inscEstadual": "15.233.175-1", "endereco": "Av. Pedro Álvares Cabral, 3992 - Sacramenta, Belém - PA, 66120-620, Brasil", "fixo": "(91) 3244-5350", "celular": "", "celularII": "", "emailLoja": "atretok@hotmail.com", "emailNF": "atretok@hotmail.com", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "541", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN50.Vista_Externa.133326.jpg"}, {"id": "CL34EN91", "cliente": "L F DE ALMEIDA COMÉRCIO", "nomeFantasia": "ARTERIAL TINTAS", "classificacao": "Ativo - Com LCredito", "municipio": "Ananindeua", "regiao": "220", "cnpj": "09.581.875/0001-07", "inscEstadual": "", "endereco": "Tv. We-69 - Coqueiro, Ananindeua - PA, 67140, Brasil", "fixo": "(91) 3273-3035", "celular": "(91) 99118-7666", "celularII": "", "emailLoja": "levialmeida1967@gmail.com", "emailNF": "levialmeida1967@gmail.com", "proprietario": "LEVI", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "792", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "> 1 agenda - 1 caderno - 2 canetas - 2 agendas - 2 copos", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN91.Vista_Externa.200944.jpg"}, {"id": "CL34EN29", "cliente": "AREDE COMERCIO DE TINTAS LTDA - Matriz", "nomeFantasia": "CARTINTAS", "classificacao": "Ativo - TOP 10", "municipio": "Belem", "regiao": "220", "cnpj": "63.874.309/0004-73", "inscEstadual": "15.273.119-9", "endereco": "Av. Pedro Miranda, 2205 - Pedreira, Belém - PA, 66085-026, Brasil", "fixo": "(91) 3347-7091 / (91) 33218-700", "celular": "(91) 984144431", "celularII": "", "emailLoja": "arede@cartintas.com.br", "emailNF": "arede@cartintas.com.br", "proprietario": "ANTONIO JOSÉ FERREIRA CARDOSO AREDE", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "1160", "rota": "Belem / Grd Belem - A1", "mimo": "> MZ (1 agenda - 1 caderno - 16 canetas - 5 calendario m.p - 16 copos - 5 chaveiros) \n  > Pe Eutiquio (1 caderno - 1 calendario p - 4 copos - 4 chaveiros)\n  > Independencia (1 agenda - 3 copos - 3 canetas - 3 chaveiros)", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN29.Vista_Externa.001541.jpg"}, {"id": "CL34EN45", "cliente": "COELHINHO COM DE MAT DE CONSTRUÇÃO LTDA", "nomeFantasia": "COELHINHO", "classificacao": "Inativo - Compra Limitada fica sem preço", "municipio": "Santa Isabel do Para", "regiao": "220", "cnpj": "12.745.631/0001-19", "inscEstadual": "12.745.631-9", "endereco": "Av. Pedro Constantino, 1150 - Centro, Santa Izabel do Pará - PA, 68790-000, Brasil", "fixo": "(91) 3744-1244", "celular": "", "celularII": "", "emailLoja": "coelho.mat@hotmail.com", "emailNF": "coelho.mat@hotmail.com", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "1774", "rota": "Santa Isabel - B1 : Santa Isabel do Para", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN45.Vista_Externa.230802.jpg"}, {"id": "CL34EN39", "cliente": "C S P PORTAL ME", "nomeFantasia": "", "classificacao": "Inativo - Preferencia outra Marca", "municipio": "Belem", "regiao": "220", "cnpj": "13.869.278/0001-41", "inscEstadual": "15.340.170-2", "endereco": "Tv. do Chaco, 136 - Pedreira, Belém - PA, 66087-543, Brasil", "fixo": "(91) 3266-5283", "celular": "(91) 98933-9282", "celularII": "", "emailLoja": "genesiofeio@hotmail.com", "emailNF": "genesiofeio@hotmail.com", "proprietario": "CARMEM SILVA PACHECO PORTAL", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "1881", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN39.Vista_Externa.145406.jpg"}, {"id": "CL34EN68", "cliente": "GAZEL AUTO TINTAS LTDA", "nomeFantasia": "GAZEL AUTO TINTAS LTDA", "classificacao": "Ativo - TOP 10", "municipio": "Ananindeua", "regiao": "220", "cnpj": "14.062.481/0001-74", "inscEstadual": "15.344.235-2", "endereco": "BR-316, KM 08 - 3026 loja G- Centro, Ananindeua - PA, 67033-971, Brasil", "fixo": "(91) 3286-1433", "celular": "", "celularII": "", "emailLoja": "felipe.gazel@hotmail.com", "emailNF": "felipe.gazel@hotmail.com", "proprietario": "FELIPE GAZEL CORREA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "1899", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "1 caderno, 1 agenda, 1 calendário parede, 3 copos, 1 porta caneta, 3 canetas, 3 lixo Car", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN68.Imagem_Int.183036.jpg"}, {"id": "CL34EN81", "cliente": "J R PAULINO DA SILVA LTDA", "nomeFantasia": "L & G TINTAS", "classificacao": "Ativo - Com LCredito", "municipio": "Castanhal", "regiao": "207", "cnpj": "11000000000000", "inscEstadual": "150000000", "endereco": "R. Francisco Magalhães, 1997 - Pirapora, Castanhal - PA, 68740-222, Brasil", "fixo": "9137116242", "celular": "", "celularII": "(91)996215103", "emailLoja": "legtintas@hotmail.com", "emailNF": "legtintas@hotmail.com", "proprietario": "JOSÉ ROBERTO PAULINO DA SILVA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "2113", "rota": "Castanhal - C1 : Castanhal", "mimo": "> 2 cadernos - 2 canetas - 1 calendario p - 2 chaveiros", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN81.Imagem_Int.151418.jpg"}, {"id": "CL34EN57", "cliente": "E LOBATO AVELINO", "nomeFantasia": "C.M.TINTAS AUTOMOTIVAS", "classificacao": "Inativo - Preferencia outra Marca", "municipio": "Belem", "regiao": "220", "cnpj": "19.668.379/0001-30", "inscEstadual": "15.438.390-2", "endereco": "Av. Pedro Álvares Cabral, 94 - Marambaia, Belém - PA, 66050-400, Brasil", "fixo": "(91) 3347-1168", "celular": "", "celularII": "", "emailLoja": "eduardo@A", "emailNF": "eduardo@A", "proprietario": "EDUARDO", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "2846", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN57.Vista_Externa.133412.jpg"}, {"id": "CL34EN125", "cliente": "PORTAL COM E SERV LTDA", "nomeFantasia": "PORTAL DAS TINTAS", "classificacao": "Ativo - TOP 10", "municipio": "Belem", "regiao": "220", "cnpj": "17.881.579/0001-41", "inscEstadual": "15.405.190-0", "endereco": "R. Oito de Maio, 87 - Campina de Icoaraci (Icoaraci), Belém - PA, 66813-085, Brasil", "fixo": "", "celular": "(91) 98874-3685 (Sra. Wilma)", "celularII": "(91) 98485-2312 (Jhonata Santos)", "emailLoja": "portaldastintas87@hotmail.com", "emailNF": "portaldastintas87@hotmail.com", "proprietario": "WILMA SANTANA BARRETO PORTAL", "cpfProp": "289.148.212-34", "identProp": "", "anivProp": "", "administrador": "JOÃO DA SILVA PORTAL / 166.301.812-04", "anivAdm": "", "codLj": "2985", "rota": "Grd Belem - A1 : Belem", "mimo": "> 1 agenda - 2 cadernos - 7 canetas - 2 calendarios m.p - 7 copos - 3 chaveiros (dado a parte para Jhonata)", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN125.Vista_Externa.151353.jpg"}, {"id": "CL34EN71", "cliente": "GOMES AUTO TINTAS DISTRIBUIDORA LTDA", "nomeFantasia": "GOMES AUTO TINTAS", "classificacao": "Ativo - TOP 10", "municipio": "Castanhal", "regiao": "207", "cnpj": "22000000000000", "inscEstadual": "150000000", "endereco": "R. Itamarati, 239 - Caicara, Castanhal - PA, 68744-254, Brasil", "fixo": "9137114745", "celular": "(91) 98123-5943", "celularII": "", "emailLoja": "GOMESAUTOTINTAS@HOTMAIL.COM", "emailNF": "GOMESAUTOTINTAS@HOTMAIL.COM", "proprietario": "PAULO ROBERTO GOMES RODRIGUES", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "3037", "rota": "Castanhal - C1 : Castanhal", "mimo": "> 1 agenda - 4 canetas - 3 calendarios - 4 copos - 4 chaveiros - $ 50,00", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN71.Imagem_Int.165201.jpg"}, {"id": "CL34EN103", "cliente": "MARIO CARDOSO DO REGO", "nomeFantasia": "MARIO BYKE TINTAS", "classificacao": "Ativo - Com LCredito", "municipio": "Abaetetuba", "regiao": "220", "cnpj": "06.180.990/0001-73", "inscEstadual": "15.236.881-7", "endereco": "Passagem Quinze de Novembro, 1876 - São Lourenço, Abaetetuba - PA, 68440-000, Brasil", "fixo": "(91) 3751-2251", "celular": "(91) 98019-8357", "celularII": "", "emailLoja": "mariopecasetintas@hotmail.com", "emailNF": "mariopecasetintas@hotmail.com", "proprietario": "MÁRIO CARDOSO DO REGO", "cpfProp": "1", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "3106", "rota": "Abaetetuba - M1 : Abaetetuba", "mimo": "> 1 agenda - 1 caderno - 2 canetas - 1 calendario", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN103.Vista_Externa.223717.jpg"}, {"id": "CL34EN89", "cliente": "L. A. G. CORREA LTDA", "nomeFantasia": "ELETROLUIZ", "classificacao": "Ativo - Com LCredito", "municipio": "Benevides", "regiao": "220", "cnpj": "06.146.573/0001-04", "inscEstadual": "15.236.481-1", "endereco": "R. Nações Unidas, 61 - Benevides, PA, 68795-000, Brasil", "fixo": "(91) 3724-4909", "celular": "", "celularII": "", "emailLoja": "lagcorreaeletroluiz@yahoo.com.br", "emailNF": "lagcorreaeletroluiz@yahoo.com.br", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "3652", "rota": "Santa Isabel - B1.3 : Benevides", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN89.Vista_Externa.225023.jpg"}, {"id": "CL34EN142", "cliente": "TENDA AUTO TINTAS EIRELI", "nomeFantasia": "TENDA AUTO TINTAS & CIA", "classificacao": "Ativo - TOP 10", "municipio": "Castanhal", "regiao": "207", "cnpj": "30000000000000", "inscEstadual": "160000000", "endereco": "Av. Altamira, 342 - Nova Olinda, Castanhal - PA, 68742-310, Brasil", "fixo": "", "celular": "(91) 99942-2012", "celularII": "", "emailLoja": "tenda_autotintas@hotmail.com", "emailNF": "emerson_enzo@hotmail.com", "proprietario": "EMILIA MARIA CRUZ DA SILVA OLIVEIRA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "4008", "rota": "Castanhal - C1 : Castanhal", "mimo": "> 1 agenda - 2 cadernos - 7 canetas - 2 calendarios m.p - 3 copos", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN142.Vista_Externa.135612.jpg"}, {"id": "CL34EN26", "cliente": "ANTONIO CARLOS ANITELLI", "nomeFantasia": "A C ANITELLI", "classificacao": "Inativo - Compra c/outro CNPJ", "municipio": "Castanhal", "regiao": "207", "cnpj": "29000000000000", "inscEstadual": "160000000", "endereco": "TRAVESSA CONEGO LUIS LEITÃO, 1863 - APTO 307,,Castanhal,Pará", "fixo": "9137212265", "celular": "", "celularII": "", "emailLoja": "rodrigoanitelli@uol.com.br", "emailNF": "", "proprietario": "ANTONIO CARLOS ANITELLI", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "4378", "rota": "Castanhal - C1 : Castanhal", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN26.Vista_Externa.133803.jpg"}, {"id": "CL34EN67", "cliente": "G B TAVARES", "nomeFantasia": "AUTO TINTAS TAVARES", "classificacao": "Inadimplente", "municipio": "Marituba", "regiao": "220", "cnpj": "34.339.581/0001-02", "inscEstadual": "15.654.329-0", "endereco": "R. do Fio, 3b - Bairro Novo, Marituba - PA, 67105-290, Brasil", "fixo": "(91) 5236-6503", "celular": "(91) 98815-7867", "celularII": "(91) 99602-0432", "emailLoja": "ferragemtavares46@gmail.com", "emailNF": "ferragemtavares46@gmail.com", "proprietario": "GLEISON / 996020432", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "4527", "rota": "Grd Belem - A1.2 : Marituba", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN67.Imagem_Int.152555.jpg"}, {"id": "CL34EN107", "cliente": "M L DA SILVA FREITAS", "nomeFantasia": "PANDA TINTAS", "classificacao": "Ativo - TOP 10", "municipio": "Ananindeua", "regiao": "220", "cnpj": "25.161.436/0001-93", "inscEstadual": "15.530.950-1", "endereco": "Tv. We-31 (Cj Cidade Nova V), 762 - Cidade Nova, Ananindeua - PA, 67133-098, Brasil", "fixo": "(91) 3207-6372", "celular": "(91) 98113-7100", "celularII": "", "emailLoja": "pandatintasautocar@hotmail.com", "emailNF": "pandatintasautocar@hotmail.com", "proprietario": "MICHEL LIPPY DA SILVA FREITAS", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "4575", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN107.Imagem_Int.184236.jpg"}, {"id": "CL34EN140", "cliente": "SERRA COMERCIO DE TINTAS LTDA", "nomeFantasia": "SERRA PRODUTOS AUTOMOTIVOS", "classificacao": "Ativo - Com LCredito", "municipio": "Ananindeua", "regiao": "220", "cnpj": "27.458.432/0001-05", "inscEstadual": "15.616.945-2", "endereco": "Tv. We Vinte e Sete, 66 - 662 - Coqueiro, Ananindeua - PA, 67133-195, Brasil", "fixo": "", "celular": "(91) 982180687", "celularII": "", "emailLoja": "fabioserra20@yahoo.com.br", "emailNF": "fabioserra20@yahoo.com.br", "proprietario": "FABIO DE OLIVEIRA SERRA", "cpfProp": "890.108.172-53", "identProp": "03615770474 DETRAN-PA", "anivProp": "1986-01-28", "administrador": "", "anivAdm": "", "codLj": "4621", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN140.Vista_Externa.201502.jpg"}, {"id": "CL34EN88", "cliente": "JOSUE DE A SIQUEIRA", "nomeFantasia": "TINTÃO TINTAS", "classificacao": "Ativo - TOP 10", "municipio": "Belem", "regiao": "220", "cnpj": "33.786.495/0001-85", "inscEstadual": "15.647.091-8", "endereco": "Tv. Mauriti, 612 - Pedreira, Belém - PA, 66083-000, Brasil", "fixo": "(91) 9233-5441", "celular": "(91) 98217-0762", "celularII": "", "emailLoja": "mixtintao@hotmail.com", "emailNF": "mixtintao@hotmail.com", "proprietario": "JOSUE DE A SIQUEIRA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "4641", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN88.Vista_Externa.150549.jpg"}, {"id": "cce0950b", "cliente": "CLEDIANE MARIA DOS PASSOS PINTO 72392240230", "nomeFantasia": "", "classificacao": "Ativo - Com LCredito", "municipio": "Ananindeua", "regiao": "220", "cnpj": "25.150.797/0001-34", "inscEstadual": "15.530.828-9", "endereco": "Av. Cidade de Afuá, 857 - Levilândia, Ananindeua - PA, 67015-800, Brasil", "fixo": "", "celular": "(91) 98993-1094", "celularII": "", "emailLoja": "pandatintasautocar@htmail.com", "emailNF": "pandatintasautocar@htmail.com", "proprietario": "CLEDIANE MARIA DOS PASSOS PINTO", "cpfProp": "723.922.402-30", "identProp": "4034999 PC PA", "anivProp": "2001-01-01", "administrador": "MICHEL LIPPY", "anivAdm": "2001-01-01", "codLj": "4692", "rota": "Ananindeua / Grd Belem - A1.2", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN99", "cliente": "M S H PORTELA", "nomeFantasia": "PRIME - PRODUTOS E SERVIÇOS", "classificacao": "Ativo - Com LCredito", "municipio": "Santa Isabel do Para", "regiao": "220", "cnpj": "19.558.613/0001-77", "inscEstadual": "15.700.541-0", "endereco": "BR-316, km 41 - Juazeiro, Santa Izabel do Pará - PA, 68790-000, Brasil", "fixo": "", "celular": "(91) 98194-5292", "celularII": "", "emailLoja": "marcus_sadao@hotmail.com", "emailNF": "marcus_sadao@hotmail.com", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "4699", "rota": "Santa Isabel - B1 : Santa Isabel do Para", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN99.Vista_Externa.230821.jpg"}, {"id": "CL34EN117", "cliente": "PAV TINTAS COM DE TINTAS E MAT P PINTURA LTDA - Sta Isabel", "nomeFantasia": "PAV TINTAS (Sta. ISABEL)", "classificacao": "Ativo - Com LCredito", "municipio": "Santa Isabel do Para", "regiao": "220", "cnpj": "37.924.346/0001-96", "inscEstadual": "15.707.723-3", "endereco": "BR-316, 1050, Santa Izabel do Pará - PA, 68790-000, Brasil", "fixo": "(91) 3711-0597", "celular": "(91) 98296-6224", "celularII": "(91) 98577-4660", "emailLoja": "pavsantaisabel@gmail.com", "emailNF": "pavsantaisabel@gmail.com", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "4897", "rota": "Santa Isabel - B1 : Santa Isabel do Para", "mimo": "> 1 caderno - 4 canetas - 1 calendario - 4 copos - 4 chaveiros", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN117.Vista_Externa.230743.jpg"}, {"id": "CL34EN24", "cliente": "ADILA SHIRLEY RIBEIRO LIMA 72392185204", "nomeFantasia": "M & A REFRIGERAÇÃO", "classificacao": "Ativo - Antecipado Possui Lj Agregada", "municipio": "Mosqueiro", "regiao": "220", "cnpj": "36000000000000", "inscEstadual": "160000000", "endereco": "R. 15 de Novembro, 57 - Vila, Belém - PA, 66910-000, Brasil", "fixo": "", "celular": "(91) 99628-3184", "celularII": "", "emailLoja": "adilaslima@hotmail.com", "emailNF": "adilaslima@hotmail.com", "proprietario": "ADILA SHIRLEY RIBEIRO LIMA", "cpfProp": "", "identProp": "", "anivProp": "2024-08-24", "administrador": "", "anivAdm": "", "codLj": "5068", "rota": "Grd Belem - A1.1 : Mosqueiro", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN24.Vista_Externa.230334.jpg"}, {"id": "CL34EN146", "cliente": "V BANDEIRA DE L LTDA", "nomeFantasia": "M B MOTO PEÇAS", "classificacao": "Ativo - Com LCredito", "municipio": "Santa Barbara", "regiao": "220", "cnpj": "43.314.142/0001-36", "inscEstadual": "15.785.679-8", "endereco": "Rod. Eng. Augusto Meira Filho, 9 - Livramento, Santa Bárbara do Pará - PA, 66923-120, Brasil", "fixo": "(91) 8726-8141", "celular": "", "celularII": "(91) 99966-0799", "emailLoja": "vanderlibandeira@hotmail.com", "emailNF": "vanderlibandeira@hotmail.com", "proprietario": "VANDERLI BANDEIRA LIMA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5202", "rota": "Grd Belem - A1.1 : Santa Barbara", "mimo": "> 2 agendas - 1 caderno - 3 canetas - 1 calendarios m", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN146.Vista_Externa.230706.jpg"}, {"id": "CL34EN82", "cliente": "JAM CAROLINO MAT. CONSTR. EIRELI", "nomeFantasia": "VITORIA MATERIAIS DE CONSTRUÇÃO", "classificacao": "Inativo - Segmento Adverso", "municipio": "Ananindeua", "regiao": "220", "cnpj": "42.291.303/0001-50", "inscEstadual": "15.768.589-6", "endereco": "R. Paraguai, 1 - Coqueiro, Ananindeua - PA, 67115-100, Brasil", "fixo": "", "celular": "(91) 98116-5", "celularII": "", "emailLoja": "multi.limpe@bol.com.br", "emailNF": "multi.limpe@bol.com.br", "proprietario": "JOSE AUGUSTO MARQUES CAROLINO", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5271", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN82.Vista_Externa.133029.jpg"}, {"id": "CL34EN53", "cliente": "DISTRIBUIDORA UNIÃO TINTAS E INSUMOS EIRELI", "nomeFantasia": "ATACADISTA UNIAO", "classificacao": "Inativo - Preferencia outra Marca", "municipio": "Belem", "regiao": "220", "cnpj": "27.704.828/0001-87", "inscEstadual": "15.562.859-3", "endereco": "Av. Tavares Bastos, 1472 - Marambaia, Belém - PA, 66615-005, Brasil", "fixo": "", "celular": "(91) 98414-2731", "celularII": "", "emailLoja": "uniaoatacadista.pa@gmail.com", "emailNF": "uniaoatacadista.pa@gmail.com", "proprietario": "RENATO / 99170-7733", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5275", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN98", "cliente": "M RIBEIRO GOMES MATERIAL DE CONSTRUCAO", "nomeFantasia": "KALM FERRAGENS E MATERIAIS DE CONSTRU", "classificacao": "Inativo - Preferencia outra Marca", "municipio": "Belem", "regiao": "220", "cnpj": "39.514.623/0001-18", "inscEstadual": "15.723.270-0", "endereco": "Passagem Benfica, 1 - Bengui, Belém - PA, 66630-895, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "kalmmaterialdeconstrucao@gmail.com", "emailNF": "kalmmaterialdeconstrucao@gmail.com", "proprietario": "MARIANO RIBEIRO GOMES 33280835291", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5337", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN141", "cliente": "SERRA E LEÃO COMERCIO DE TINTAS LTDA", "nomeFantasia": "S L TINTAS AUTOMOTIVAS", "classificacao": "Inativo - Pesquisa Preço", "municipio": "Belem", "regiao": "220", "cnpj": "29.243.559/0001-24", "inscEstadual": "15.586.816-0", "endereco": "R. Oliveira Belo, 866 - Umarizal, Belém - PA, 66050-380, Brasil", "fixo": "", "celular": "(91) 98354-3333", "celularII": "", "emailLoja": "brunokju21@hotmail.com", "emailNF": "brunokju21@hotmail.com", "proprietario": "BRUNO DE OLIVEIRA SERRA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5349", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN141.Vista_Externa.151705.jpg"}, {"id": "CL34EN63", "cliente": "F M COMÉRCIO E SERVIÇOS ELETRICOS EIRELI", "nomeFantasia": "F M TINTAS AUTOMOTIVAS", "classificacao": "Inativo - Sem LCredito", "municipio": "Castanhal", "regiao": "207", "cnpj": "20.165.905/0001-29", "inscEstadual": "15.447.892-0", "endereco": "Tv. Juarez Melo Merigliano, 33 - Jaderlândia, Castanhal - PA, 68740-970, Brasil", "fixo": "", "celular": "(91) 98450-2943", "celularII": "", "emailLoja": "fmcomercioeservicoscast@gmail.com", "emailNF": "fmcomercioeservicoscast@gmail.com", "proprietario": "FLAVIA MARIA FARIAS ROCHA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5355", "rota": "Castanhal - C1 : Castanhal", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN111", "cliente": "NIELSON DA CONCEIÇÃO NUNES 43064825291", "nomeFantasia": "N P TINTAS COMERCIO E SERVICOS", "classificacao": "Inativo - Segmento Adverso", "municipio": "Maracanã", "regiao": "207", "cnpj": "42.593.697/0001-00", "inscEstadual": "15.774.355-1", "endereco": "R. Cantídio Guimarães 02 - Maracanã, PA, 68710-000, Brasil", "fixo": "", "celular": "(91) 99984-5148", "celularII": "", "emailLoja": "nielsonn358@gmail.com", "emailNF": "nielsonn358@gmail.com", "proprietario": "NIELSON DA CONCEIÇÃO NUNES", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5385", "rota": "- : Maracanã", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN111.Vista_Externa.205718.jpg"}, {"id": "CL34EN118", "cliente": "PAV TINTAS COMERCIO DE MATERIAIS PARA PINTURA AUTOMOTIVA LTDA - Ananindeua", "nomeFantasia": "PAV TINTAS (ANANINDEUA)", "classificacao": "Ativo - Com LCredito", "municipio": "Ananindeua", "regiao": "220", "cnpj": "46.970.948/0001-70", "inscEstadual": "15.843.221-5", "endereco": "Tv. We-31 (Cj Cidade Nova V), 392 - Cidade Nova, Ananindeua - PA, 67133-102, Brasil", "fixo": "", "celular": "(91) 981811572 (Jean)", "celularII": "", "emailLoja": "pavtintasananindeua@gmail.com", "emailNF": "pavtintasananindeua@gmail.com", "proprietario": "PAULA BRUNA GOMES RODRIGUES", "cpfProp": "001.901.662-07", "identProp": "nº 6071218, órgão expedidor PC - PA", "anivProp": "1990-06-25", "administrador": "Jean Reis", "anivAdm": "2026-04-30", "codLj": "5495", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN118.Imagem_Int.190514.jpg"}, {"id": "CL34EN80", "cliente": "J M CUNHA JUNIOR EIRELI", "nomeFantasia": "CUSTOM MOTOS PEÇAS E SERVIÇOS", "classificacao": "Inativo - Segmento Adverso", "municipio": "Ananindeua", "regiao": "220", "cnpj": "37.905.410/0001-91", "inscEstadual": "15.707.641-5", "endereco": "Est. da Providência, 61 - Cidade Nova, Ananindeua - PA, 67015-301, Brasil", "fixo": "", "celular": "(91) 98571-0614", "celularII": "", "emailLoja": "custom.motos.pecas@hotmail.com", "emailNF": "custom.motos.pecas@hotmail.com", "proprietario": "JOSE MARIA CUNHA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5508", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN80.Vista_Externa.201342.jpg"}, {"id": "CL34EN33", "cliente": "BARRETO COMERCIO DE MATERIAIS DE CONSTRUÇÃO LTDA", "nomeFantasia": "CASA BARRETO MATERIAIS DE CONSTRUÇÃO", "classificacao": "Inativo - Segmento Adverso", "municipio": "Santo Antonio do Taua", "regiao": "220", "cnpj": "23.369.995/0001-68", "inscEstadual": "15.501.285-1", "endereco": "Av. Juscelino Kubitscheck, 61 - Santo Antônio do Tauá, PA, 68786-000, Brasil", "fixo": "", "celular": "(91) 98569-9016", "celularII": "", "emailLoja": "casabarretomt@hotmail.com", "emailNF": "casabarretomt@hotmail.com", "proprietario": "ADRIELEM SOUZA BARRETO", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5554", "rota": "Santa Isabel - B1.1 : Santo Antonio do Taua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN33.Vista_Externa.230854.jpg"}, {"id": "CL34EN48", "cliente": "CONSTRUCENTER SERVIÇOS & COMÉRCIO LTDA", "nomeFantasia": "CONSTRUCENTER", "classificacao": "Inativo - Segmento Adverso", "municipio": "Sao Caetano de Odivelas", "regiao": "207", "cnpj": "19.853.412/0001-00", "inscEstadual": "15.441.928-1", "endereco": "Av. Magalhães Barata, 286 - São Caetano de Odivelas, PA, 68775-000, Brasil", "fixo": "", "celular": "(91) 99169-8760", "celularII": "", "emailLoja": "construcentersco@gmail.com", "emailNF": "construcentersco@gmail.com", "proprietario": "VALDOENE FERREIRA DA SILVA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5607", "rota": "Santa Isabel - B1.2 : Sao Caetano de Odivelas", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN48.Vista_Externa.230919.jpg"}, {"id": "CL34EN110", "cliente": "NAYANE DA SILVA DUARTE 03661234242", "nomeFantasia": "", "classificacao": "Ativo - Antecipado", "municipio": "Castanhal", "regiao": "207", "cnpj": "45.803.775/0001-33", "inscEstadual": "15.824.728-0", "endereco": "Alameda Pedro Feitosa, 2737 - Estrela, Castanhal - PA, 68741, Brasil", "fixo": "", "celular": "(91) 98553-1160", "celularII": "", "emailLoja": "rodrigoanitelli@uol.com.br", "emailNF": "rodrigoanitelli@uol.com.br", "proprietario": "NAYANE DA SILVA DUARTE", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5664", "rota": "Castanhal - C1 : Castanhal", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "30a03737", "cliente": "M. F. DA C. SIMÕES EIRELI", "nomeFantasia": "AFONSO TINTAS", "classificacao": "Potencial - Preferencia outra marca", "municipio": "Belem", "regiao": "220", "cnpj": "21.161.981/0001-29", "inscEstadual": "15.464.330-0", "endereco": "Av. Pedro Miranda, 1290 - Pedreira, Belém - PA, 66085-022, Brasil", "fixo": "(91) 3201-0777", "celular": "", "celularII": "", "emailLoja": "atendimento@afonsocenter.com.br", "emailNF": "", "proprietario": "MARCIA FRIAS DA COSTA SIMÕES", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5665", "rota": "Belem / Grd Belem - A1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN20", "cliente": "A PADILHA EIRELI", "nomeFantasia": "PARAENSE HOME CENTER", "classificacao": "Inativo - Segmento Adverso", "municipio": "Belem", "regiao": "207", "cnpj": "02.999.105/0003-93", "inscEstadual": "15.496.993-1", "endereco": "Av. Paulo Costa, 2739 - Água Boa (Outeiro, Belém - PA, 66843-005, Brasil", "fixo": "", "celular": "(91) 98385-2890", "celularII": "", "emailLoja": "paraensehc@hotmail.com", "emailNF": "paraensehc@hotmail.com", "proprietario": "ARLINDO PADILHA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5733", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN20.Vista_Externa.201641.jpg"}, {"id": "CL34EN119", "cliente": "PAV TINTAS COMERCIO DE TINTAS LTDA - Abaetetuba", "nomeFantasia": "PAV TINTAS (ABAETETUBA)", "classificacao": "Ativo - Com LCredito", "municipio": "Abaetetuba", "regiao": "220", "cnpj": "49.508.288/0001-07", "inscEstadual": "15.878.929-6", "endereco": "Rod. Dr. João Miranda, 3480 - Castanhal, Abaetetuba - PA, 68440-000, Brasil", "fixo": "", "celular": "(91) 986248327", "celularII": "", "emailLoja": "pav.abaetetuba@hotmail.com", "emailNF": "pav.abaetetuba@hotmail.com", "proprietario": "ANDERSON SARAIVA SOUZA", "cpfProp": "1", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "5795", "rota": "Abaetetuba - M1 : Abaetetuba", "mimo": "> 1 caderno - 6 canetas - 2 calendarios m.p - 6 copos", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN119.Vista_Externa.223748.jpg"}, {"id": "CL34EN25", "cliente": "ANGELA DE J. TAVARES DE SENA PAIXÃO", "nomeFantasia": "CASA DAS TINTAS AQUARELA DO PARÁ", "classificacao": "Potencial", "municipio": "Abaetetuba", "regiao": "220", "cnpj": "40.253.283/0001-06", "inscEstadual": "15.734.516-5", "endereco": "Tv. Prof. Armando Costa Baía, 2145 - Cristo Redentor, Abaetetuba - PA, 68440-000, Brasil", "fixo": "", "celular": "(91) 998923-008", "celularII": "", "emailLoja": "angela.dejeses1302@gmail.com", "emailNF": "angela.dejeses1302@gmail.com", "proprietario": "ANGELA DE JESUS TAVARES DE SENA PAIXÃO", "cpfProp": "628.586.962-68", "identProp": "3347388 PC/PA", "anivProp": "1979-02-13", "administrador": "", "anivAdm": "", "codLj": "5899", "rota": "Abaetetuba / Abaetetuba - M1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN25.Imagem_Int.162710.jpg"}, {"id": "7193052b", "cliente": "ELIANE OLIVEIRA DA SILVA", "nomeFantasia": "CACIQUE TINTAS E MATERIAIS DE CONSTRUÇÃO", "classificacao": "Ativo - Com LCredito", "municipio": "Marituba", "regiao": "220", "cnpj": "35.124.318/0001-69", "inscEstadual": "15.664.754-0", "endereco": "R. Cláudio Barbosa da Silva, 977 - Boa Vista, Marituba - PA, 67105-290, Brasil", "fixo": "", "celular": "(91) 99261-5461", "celularII": "", "emailLoja": "hamiltog730@gmail.com", "emailNF": "", "proprietario": "ELIANE OLIVEIRA DA SILVA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "CACIQUE", "anivAdm": "", "codLj": "5918", "rota": "Marituba / Grd Belem - A1.2", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/7193052b.Vista_Externa.202910.jpg"}, {"id": "a2d5ff27", "cliente": "M & A REFRIGERACAO E COMERCIO DE TINTAS AUTOMOTIVAS LTDA", "nomeFantasia": "M & A NO GRAU REFRIGERAÇÃO", "classificacao": "Ativo - Antecipado Possui Lj Agregada", "municipio": "Belem", "regiao": "220", "cnpj": "24.055.470/0001-10", "inscEstadual": "15.912.692-4", "endereco": "R. 15 de Novembro, 55 - Ilha do Mosqueiro, Belém - PA, 66910-000, Brasil", "fixo": "", "celular": "(91) 99628-3184", "celularII": "(91) 98742-7976", "emailLoja": "flavio.thiago55@gmail.com", "emailNF": "", "proprietario": "Flávio Thiago Ribeiro Lima da Silva", "cpfProp": "016.958.672-38", "identProp": "06061282928 DETRAN/PA", "anivProp": "1992-04-29", "administrador": "", "anivAdm": "", "codLj": "6116", "rota": "Mosqueiro / Grd Belem - A1.1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "aecd3227", "cliente": "R M BOULHOSA LTDA", "nomeFantasia": "R M BOULHOSA EIRELI", "classificacao": "Inativo - Pesquisa Preço", "municipio": "Belem", "regiao": "220", "cnpj": "15.392.021/0001-77", "inscEstadual": "15.368.861-0", "endereco": "R. Dr. Assis, 377 - Cidade Velha, Belém - PA, 66020-010, Brasil", "fixo": "", "celular": "(91) 98429-1429", "celularII": "", "emailLoja": "lojaboulhosatintas@hotmail.com", "emailNF": "", "proprietario": "ROGÉRIO MARINHO BOULHOSA", "cpfProp": "697.927.802-97", "identProp": "01198219940 - DETRAN.PA", "anivProp": "1981-09-24", "administrador": "", "anivAdm": "", "codLj": "6128", "rota": "Belem / Grd Belem - A1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/aecd3227.Vista_Externa.185040.jpg"}, {"id": "38c12481", "cliente": "51.453.227 ELEN CHRISTIAN TEIXEIRA MIRANDA", "nomeFantasia": "ELEN CHRISTIAN MATERIAIS DE CONSTRUÇÃP", "classificacao": "Inativo - Sem LCredito", "municipio": "Marituba", "regiao": "220", "cnpj": "51.453.227/0001-23", "inscEstadual": "15.906.774-0", "endereco": "RUA OITAVA, 11", "fixo": "", "celular": "(91) 98585-6373", "celularII": "", "emailLoja": "elenmatcons@gmail.com", "emailNF": "elenmatcons@gmail.com", "proprietario": "ELEN CHRISTIAN TEIXEIRA MIRANDA", "cpfProp": "008.323.882-46", "identProp": "", "anivProp": "", "administrador": "TAVARES", "anivAdm": "", "codLj": "6233", "rota": "Marituba / Grd Belem - A1.2", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "9e25acc8", "cliente": "FRANCISCO CRISTOVAO BASTOS NETTO - Matriz", "nomeFantasia": "FRANK TINTAS", "classificacao": "Inativo - Sem LCredito", "municipio": "Belem", "regiao": "220", "cnpj": "40.746.855/0001-80", "inscEstadual": "15.742.024-8", "endereco": "R. dos Mundurucus, 4830 - Jurunas, Belém - PA, 66073-005, Brasil", "fixo": "", "celular": "(91) 98828.1433", "celularII": "", "emailLoja": "frankarauto@gmail.com", "emailNF": "", "proprietario": "FRANCISCO CRISTOVAO BASTOS NETTO", "cpfProp": "651.150.902-87", "identProp": "8178580 PC-PA", "anivProp": "1955-07-25", "administrador": "", "anivAdm": "2001-01-01", "codLj": "6245", "rota": "Belem / Grd Belem - A1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "64928c6a", "cliente": "AUTO TINTAS CASTANHAL LTDA", "nomeFantasia": "AUTO TINTAS CASTANHAL", "classificacao": "Ativo - Antecipado", "municipio": "Castanhal", "regiao": "207", "cnpj": "55.712.872/0001-74", "inscEstadual": "15.965.740-7", "endereco": "Av. Pres. Getúlio Vargas, 12 - Jaderlândia, Castanhal - PA, 68745-000, Brasil", "fixo": "", "celular": "(91) 98150-1595", "celularII": "", "emailLoja": "autotintascastanhal@yahoo.com", "emailNF": "autotintascastanhal@yahoo.com", "proprietario": "ARMANDO MASAMI YAMADA", "cpfProp": "511.557.102-15", "identProp": "3.673.907 - SSP/PA", "anivProp": "1979-03-20", "administrador": "REGINALDO DOS SANTOS PEREIRA DA SILVA", "anivAdm": "1972-05-17", "codLj": "6504", "rota": "Castanhal / Castanhal - C1", "mimo": "> 2 cadernos - 3 canetas - 1 calendario p - 3 copos - 3 chaveiros", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/64928c6a.Imagem_Int.143858.jpg"}, {"id": "a0f39624", "cliente": "A DA SILVA E SILVA REP. COM. E AGENTES DO COM. DE MERC. EM GERAL", "nomeFantasia": "SOS TINTAS", "classificacao": "Ativo - Antecipado", "municipio": "Ananindeua", "regiao": "220", "cnpj": "36.872.925/0001-70", "inscEstadual": "15.690.010-6", "endereco": "AGUAS LINDAS - BR-316, 118 - Águas Lindas, Ananindeua - PA, 67020-971, Brasil", "fixo": "", "celular": "(91) 98407-9745", "celularII": "", "emailLoja": "sostintas01@gmail.com", "emailNF": "sostintas01@gmail.com", "proprietario": "ANDRE DA SILVA E SILVA", "cpfProp": "743.036.432-20", "identProp": "02274553563 DETRAN-PA", "anivProp": "1981-06-24", "administrador": "", "anivAdm": "2001-01-01", "codLj": "6523", "rota": "Ananindeua / Grd Belem - A1.2", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/a0f39624.Imagem_Int.191409.jpg"}, {"id": "a3426779", "cliente": "ELETROTECNICA MELLO LTDA", "nomeFantasia": "ELETRO MELO", "classificacao": "Ativo - Antecipado", "municipio": "Castanhal", "regiao": "220", "cnpj": "55.740.495/0001-87", "inscEstadual": "15.965.495-5", "endereco": "R. Pedro Porpino da Silva, 2 - Imperador, Castanhal - PA, 68744-301, Brasil", "fixo": "(91) 99390-6137", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "notafiscal.mello@gmail.com", "proprietario": "CAROLINA DE CASSIA ALVES DE SOUZA", "cpfProp": "029.717.172-08", "identProp": "7371543 PC/PA", "anivProp": "1997-05-30", "administrador": "YURI DE SÁ SOARES", "anivAdm": "2001-01-01", "codLj": "6756", "rota": "Castanhal / Castanhal - C1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/a3426779.Imagem_Int.144143.jpg"}, {"id": "5b3a9031", "cliente": "A DA C S RODRIGUES", "nomeFantasia": "ATACADÃO DA CONSTRUÇÃO", "classificacao": "Potencial", "municipio": "Abaetetuba", "regiao": "220", "cnpj": "35.348.055/0001-71", "inscEstadual": "15.667.792-0", "endereco": "R. Manoel de Abreu, 11 - Cristo Redentor, Abaetetuba - PA, 68440-000, Brasil", "fixo": "", "celular": "(91) 98909-6245", "celularII": "", "emailLoja": "gustavodiasalexandre@outlook.com", "emailNF": "gustavodiasalexandre@outlook.com", "proprietario": "ANDREZA DA CONCEIÇÃO SILVA RODRIGUES", "cpfProp": "010.449.272-40", "identProp": "5922076 PC-PA", "anivProp": "1992-04-30", "administrador": "GUSTAVO DIAS ALEXANDRE", "anivAdm": "2025-09-01", "codLj": "6763", "rota": "Abaetetuba / Abaetetuba - M1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/5b3a9031.Imagem_Int.142014.jpg"}, {"id": "46c318b8", "cliente": "54.412.865 ALBANIZE DE PAULA BRITO", "nomeFantasia": "54.412.865 ALBANIZE DE PAULA BRITO", "classificacao": "Potencial", "municipio": "Benevides", "regiao": "220", "cnpj": "54.412.865/0001-94", "inscEstadual": "75.042.310-2", "endereco": "Av. Visc. de Maracajú, 10 - 210 - Benevides, PA, 68795-000, Brasil", "fixo": "", "celular": "(91) 98531-6542", "celularII": "", "emailLoja": "albanizedepaula.40@gmail.com", "emailNF": "albanizedepaula.40@gmail.com", "proprietario": "ALBANIZE DE PAULA BRITO", "cpfProp": "448.368.302-06", "identProp": "2699697 SSP-PA", "anivProp": "1974-09-11", "administrador": "", "anivAdm": "2001-01-01", "codLj": "6970", "rota": "Benevides / Santa Isabel - B1.3", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/46c318b8.Imagem_Int.185110.jpg"}, {"id": "a20f0619", "cliente": "61.847.912 ANTONI CARLOS ANITELLI", "nomeFantasia": "-", "classificacao": "Ativo - Antecipado Possui Lj Agregada", "municipio": "Castanhal", "regiao": "220", "cnpj": "61.847.912/0001-98", "inscEstadual": "75.041.436-7", "endereco": "Alameda Pedro Feitosa, 2747 - Estrela, Castanhal - PA, 68741, Brasil", "fixo": "", "celular": "91 981748877", "celularII": "", "emailLoja": "casadomarceneiro.castanhal@hotmail.com", "emailNF": "casadomarceneiro.castanhal@hotmail.com", "proprietario": "ANTONIO CARLOS ANITELLI", "cpfProp": "988.540.708-15", "identProp": "", "anivProp": "2001-01-01", "administrador": "NAYANE DA SILVA DUARTE", "anivAdm": "2001-01-01", "codLj": "7013", "rota": "Castanhal / Castanhal - C1", "mimo": "> 1 agenda - 1 caderno - 3 canetas - 2 calendarios m.p -", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/a20f0619.Imagem_Int.171222.jpg"}, {"id": "22b5fab6", "cliente": "D. FERREIRA VAZ", "nomeFantasia": "DENIS TINTAS", "classificacao": "Ativo - Antecipado", "municipio": "Castanhal", "regiao": "220", "cnpj": "64.696.514/0001-06", "inscEstadual": "75.079.411-9", "endereco": "R. João Coelho da Mota, 1532 - Saudade I, Castanhal - PA, 68741-370, Brasil", "fixo": "", "celular": "9691154727", "celularII": "", "emailLoja": "superacaomcpdenis@gmail.com", "emailNF": "", "proprietario": "DENIS FERREIRA VAZ", "cpfProp": "471.770.122-49", "identProp": "01748923920 CNH", "anivProp": "2026-12-28", "administrador": "", "anivAdm": "2026-02-18", "codLj": "7086", "rota": "Castanhal / Castanhal - C1", "mimo": "Não", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/22b5fab6.Imagem_Int.145326.jpg"}, {"id": "1d0f1357", "cliente": "PAV TINTAS COMERCIO E DISTR. UNIDADE 09 - LTDA - BELÉM", "nomeFantasia": "PAV TINTAS", "classificacao": "Ativo - Com LCredito", "municipio": "Belem", "regiao": "220", "cnpj": "65.327.347/0001-99", "inscEstadual": "75.091.651-6", "endereco": "Tv. Lomas Valentinas, 832 - Pedreira, Belém - PA, 66080-322, Brasil", "fixo": "", "celular": "(91) 99114-7184", "celularII": "(91) 98103-2406", "emailLoja": "pavtintasbelem@gmail.com", "emailNF": "pavtintasbelem@gmail.com", "proprietario": "ADILSON CAVALCANTE ANGELIM", "cpfProp": "518.090.604-00", "identProp": "00430500885 - DETRAN.PA", "anivProp": "1988-12-06", "administrador": "ANDERSON SARAIVA SOUZA", "anivAdm": "1991-10-26", "codLj": "7108", "rota": "Belem / Grd Belem - A1", "mimo": "-", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "468dd3ae", "cliente": "PAV TINTAS COM E DISTRIBUIÇÃO UNIDADE 09 LTDA - Belém 2", "nomeFantasia": "PAV TINTAS", "classificacao": "Ativo - Com LCredito", "municipio": "Belem", "regiao": "220", "cnpj": "65.327.347/0002-70", "inscEstadual": "75.106.538-2", "endereco": "Rod. Augusto Montenegro, 5955 - Parque Verde, Belém - PA, 66635-110, Brasil", "fixo": "", "celular": "(91) 99259-3264", "celularII": "", "emailLoja": "pavtintasbelem2@gmail.com", "emailNF": "pavtintasbelem2@gmail.com", "proprietario": "ADILSON CAVALCANTE ANGELIM", "cpfProp": "518.090.604-00", "identProp": "00430500885 - CNH DETRAN PA", "anivProp": "1988-12-06", "administrador": "Wellington", "anivAdm": "2001-01-01", "codLj": "7108", "rota": "Belem / Grd Belem - A1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "536f201c", "cliente": "DF ESTETICAR LTDA", "nomeFantasia": "DF ESTETICAR", "classificacao": "Ativo - Com LCredito", "municipio": "Castanhal", "regiao": "220", "cnpj": "62.064.087/0001-18", "inscEstadual": "75.043.914-9", "endereco": "Tv. Irmã Adelaíde, 2691 - Centro, Castanhal - PA, 68743-550, Brasil", "fixo": "", "celular": "(91) 98296-6224", "celularII": "", "emailLoja": "dfesteticar@gmail.com", "emailNF": "dfesteticar@gmail.com", "proprietario": "DENNIS DE SOUZA E SILVA ANGELIM", "cpfProp": "041.544.212-55", "identProp": "06742341476 - DETRAN.PA", "anivProp": "1998-08-14", "administrador": "FELIPE GOMES ANGELIM", "anivAdm": "1989-03-20", "codLj": "7198", "rota": "Castanhal / Castanhal - C1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "7c3a24d3", "cliente": "P R TINTAS LTDA", "nomeFantasia": "P R TINTAS AUTOMOTIVAS", "classificacao": "Ativo - Com LCredito", "municipio": "Marituba", "regiao": "220", "cnpj": "51.241.336/0001-87", "inscEstadual": "15.904.036-1", "endereco": "R. da Reicon, n° 161 - Bairro Novo, Marituba - PA, 67205-605, Brasil", "fixo": "", "celular": "(91) 98506.2457", "celularII": "(91) 98767.0732", "emailLoja": "prtintas2022@gmail.com", "emailNF": "prtintas2022@gmail.com", "proprietario": "ERIKE AMAURY DA SILVA AUZIER", "cpfProp": "954.474.582-34", "identProp": "5214898 PC.PA", "anivProp": "1987-03-05", "administrador": "", "anivAdm": "2001-01-01", "codLj": "7228", "rota": "Marituba / Grd Belem - A1.2", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/7c3a24d3.Imagem_Int.130122.jpg"}, {"id": "CL34EN16", "cliente": "A DE A GONÇALVES E SILVA COM VAREJISTA DE TINTAS E MATERIAIS PARA PINTURA LTDA", "nomeFantasia": "SS TINTAS E VARIEDADES", "classificacao": "Inativo - Pesquisa Preço", "municipio": "Ananindeua", "regiao": "220", "cnpj": "97.520.213/0001-86", "inscEstadual": "15.341.769-2", "endereco": "Estr. do Guajará, 2 - CASA C, 25 - Coqueiro, Ananindeua - PA, 67145-290, Brasil", "fixo": "", "celular": "(91) 98259-0605", "celularII": "(91) 98259-0009", "emailLoja": "sstintas1@hotmail.com.br", "emailNF": "sstintas1@hotmail.com.br", "proprietario": "ALESSANDRA DE ABREU GONÇALVES E SILVA", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "556201", "rota": "Grd Belem - A1.2 : Ananindeua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN16.Vista_Externa.133113.jpg"}, {"id": "a3f8ea85", "cliente": "FRANCISCO CRISTOVAO BASTOS NETTO - Deposito", "nomeFantasia": "FRANK TINTAS", "classificacao": "Inativo - Sem LCredito", "municipio": "Belem", "regiao": "220", "cnpj": "40.746.855/0002-61", "inscEstadual": "15.882.999-9", "endereco": "Tv. Guerra Passos, 979 - Guamá, Belém - PA, 66073-250, Brasil", "fixo": "", "celular": "(91) 988287433", "celularII": "", "emailLoja": "frankarauto@gmail.com", "emailNF": "frankarauto@gmail.com", "proprietario": "FRANCISCO CRISTOVAO BASTOS NETTO", "cpfProp": "651.150.902-87", "identProp": "8178580 PC-PA", "anivProp": "1955-07-25", "administrador": "Mesmo", "anivAdm": "2001-01-01", "codLj": "6245-02-01", "rota": "Belem / Grd Belem - A1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN12", "cliente": "A R COMERCIO DE TINTAS EIRELI", "nomeFantasia": "A R TINTAS", "classificacao": "Inativo - Distribuidor Autoluks", "municipio": "Belem", "regiao": "220", "cnpj": "30.580.127/0001-98", "inscEstadual": "", "endereco": "Tv. Humaitá, 1270 - Pedreira, Belém - PA, 66085-148, Brasil", "fixo": "", "celular": "(91) 98836-7020", "celularII": "", "emailLoja": "roberto@artintasautomotiva.com.br", "emailNF": "roberto@artintasautomotiva.com.br", "proprietario": "ANTONIO ROBERTO CARVALHO DE MORAES FILHO", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "******", "rota": "Grd Belem - A1 : Belem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN12.Vista_Externa.133219.jpg"}, {"id": "CL34EN121", "cliente": "PAV TINTAS COMERCIO E DISTRIBUIÇÃO LTDA - Castanhal", "nomeFantasia": "PAV TINTAS (MATRIZ)", "classificacao": "Ativo - Com LCredito", "municipio": "Castanhal", "regiao": "207", "cnpj": "04.701.696/0001-34", "inscEstadual": "150000000", "endereco": "R. Magalhães Barata, 852 - Pirapora, Castanhal - PA, 68740-060, Brasil", "fixo": "(91) 37117707", "celular": "", "celularII": "", "emailLoja": "PAVTINTAS@HOTMAIL.COM", "emailNF": "PAVTINTAS@HOTMAIL.COM", "proprietario": "ADILSON CAVALCANTE ANGELIM", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "Alex Angelin", "anivAdm": "", "codLj": "000494/1", "rota": "Castanhal - C1 : Castanhal", "mimo": "> 4 agendas - 1 caedrno - 6 canetas - 4 calendarios m - 14 copos - 14 chaveiros", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN121.Vista_Externa.225418.jpg"}, {"id": "CL34EN104", "cliente": "MARUDÁ", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Maruda", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Marudá - Praia de Marudá, Marapanim - PA, 68760-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Castanhal - C1.2 : Maruda", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN123", "cliente": "PEIXE BOI", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Peixe Boi", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Peixe-Boi - PA, 68734-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Castanhal - C1.3 : Peixe Boi", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN128", "cliente": "PRIMAVERA", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Primavera", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Primavera - PA, 68707-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Salinopolis - F1.2 : Primavera", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN129", "cliente": "QUATIPURU", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Quatipuru", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Quatipuru, PA, 68709-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Salinopolis - F1.2 : Quatipuru", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN133", "cliente": "SANTA LUZIA DO PARÁ", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Santa Luzia do Para", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Santa Luzia do Pará, PA, 68644-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Capanema - D1.2 : Santa Luzia do Para", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN134", "cliente": "SANTAREM NOVO", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Santarem Novo", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Santarém Novo, PA, 68720-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Salinopolis - F1.2 : Santarem Novo", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN136", "cliente": "SÃO DOMINGOS DO CAPIM", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Sao Domingos do Capim", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "São Domingos do Capim, PA, 68635-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "A@A", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "- : Sao Domingos do Capim", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN137", "cliente": "SAO FRANCISCO DO PARA", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Sao Francisco do Para", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "São Francisco do Pará, PA, 68748-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "A@A", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Castanhal - C1.3 : Sao Francisco do Para", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN138", "cliente": "SAO JOAO DA PONTA", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Sao Joao da Ponta", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "São João da Ponta, PA, 68774-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "A@A", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Castanhal - C1.2 : Sao Joao da Ponta", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN139", "cliente": "SÂO JOÃO DE PIRABAS", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Sao Joao de Pirabas", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "São João de Pirabas, PA, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "A@A", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Salinopolis - F1.2 : Sao Joao de Pirabas", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN143", "cliente": "TERRA ALTA", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Terra Alta", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Terra Alta - PA, 68773-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Castanhal - C1.2 : Terra Alta", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN145", "cliente": "TRACUATEUA", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Tracuateua", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Tracuateua, PA, 68647-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Bragança - E1.2 : Tracuateua", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN30", "cliente": "AUGUSTO CORREA", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Augusto Correa", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Augusto Corrêa, PA, 68610-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Bragança - E1.2 : Augusto Correa", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN31", "cliente": "AURORA DO PARÁ", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Aurora do Pará", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Aurora do Pará, PA, 68658-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "- : Aurora do Pará", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN34", "cliente": "BONITO", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Bonito", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Bonito, PA, 68645-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Capanema - D1.2 : Bonito", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN35", "cliente": "BUJARU", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Bujarú", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Bujaru, PA, 68670-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "- : Bujarú", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN47", "cliente": "COLARES", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Colares", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Colares - PA, 68785-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Santa Isabel - B1.1 : Colares", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN49", "cliente": "CURUÇA", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Curuça", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Curuçá, PA, 68750-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "- : Curuça", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN77", "cliente": "INHANGAPI", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Inhangapi", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Inhangapi, PA, 68770-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "Castanhal - C1.3 : Inhangapi", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN78", "cliente": "IRITUIA", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Itituia", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Irituia, PA, 68655-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000IMP", "rota": "- : Itituia", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN113", "cliente": "OUREM", "nomeFantasia": "Ourem", "classificacao": "Administrativa", "municipio": "Ourem", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Ourém - PA, 68640-000, Brasil", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000POT", "rota": "Capitao Poco - G1.2 : Ourem", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN148", "cliente": "VIGIA", "nomeFantasia": "MÁRCIO", "classificacao": "Administrativa", "municipio": "Vigia", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "Vigia - PA, 68780-000, Brasil", "fixo": "", "celular": "(91) 98563-0844", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000POT", "rota": "Santa Isabel - B1.1 : Vigia", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "CL34EN64", "cliente": "CARIPY LOCACOES LTDA", "nomeFantasia": "CARIPY LOCACOES", "classificacao": "Inativo - Pesquisa Preço", "municipio": "Barcarena", "regiao": "220", "cnpj": "01.189.634/0001-05", "inscEstadual": "", "endereco": "Av. Cônego Batista Campos, Barcarena - PA, 68447-000, Brasil", "fixo": "", "celular": "(91) 98155-2298", "celularII": "", "emailLoja": "", "emailNF": "", "proprietario": "LEONARDO JR", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000POT", "rota": "Abaetetuba - M1.1 : Vila dos Cabanos", "mimo": "Inicialmente este cnpj, foi dado para orçamento, hoje esta para outra prestação. Conhecida como Fermatec-Barcarena.PA", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/CL34EN64.Vista_Externa.135337.jpg"}, {"id": "CL34EN115", "cliente": "PALMARES", "nomeFantasia": "IMPRODUTIVO", "classificacao": "Administrativa", "municipio": "Palmares", "regiao": "207", "cnpj": "", "inscEstadual": "", "endereco": "palmares, pará", "fixo": "", "celular": "", "celularII": "", "emailLoja": "", "emailNF": "a@a", "proprietario": "", "cpfProp": "", "identProp": "", "anivProp": "", "administrador": "", "anivAdm": "", "codLj": "000VIS", "rota": "Tailandia - J1.1 : Palmares", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": ""}, {"id": "12b54431", "cliente": "MICHAEL COSTA ALVARENGA", "nomeFantasia": "PRO TINTAS", "classificacao": "Potencial", "municipio": "Belem", "regiao": "220", "cnpj": "57.284.270/0001-99", "inscEstadual": "75.119.043-8", "endereco": "Tv. Nove de Janeiro, 2695 - Cremação, Belém - PA, 66065-155, Brasil", "fixo": "", "celular": "(91) 98145-8099", "celularII": "", "emailLoja": "protintasbelem@gmail.com", "emailNF": "protintasbelem@gmail.com", "proprietario": "MICHAEL COSTA ALVARENGA", "cpfProp": "860.822.642-15", "identProp": "5069101 PC PA", "anivProp": "1985-09-15", "administrador": "LUIZ OTÁVIO", "anivAdm": "2001-01-01", "codLj": "7256", "rota": "Belem / Grd Belem - A1", "mimo": "", "condPgto": "", "imagensInt": [], "imagensExt": [], "imagensGoogle": [], "obsImagens": "Foto interna referenciada na planilha original: Bd_Lojas_Images/12b54431.Imagem_Int.130949.jpg"}];
+const SEED_MUNICIPIOS = ["Belém / Grande Belém - A0", "Abaetetuba / Belém - A1.6", "Ananindeua / Belém - A1.1", "Augusto Correa - PA / Capanema - B3.4", "Aurora do Para - PA / Paragominas - D1.5", "Baião - PA / Igarape Miri - G1.3", "Barcarena / Belém - A1.6", "Benevides / Belém - A1.3", "Benfica / Belém - A1.3", "Bonito - PA / Capanema - B3.1", "Braganca - PA / Capanema - B3.3", "Cachoeira do Piria - PA / Capanema - B3.2", "Cameta - PA / Igarape Miri - G1.1", "Capanema - PA / Capanema - B3", "Capitao Poco - PA / Capitao Poco - C1", "Castanhal - PA / Castanhal - B2", "Colares - PA / Santa Isabel - B1.1", "Curuca - PA / Castanhal - B2.1", "Dom Eliseu - PA / Paragominas - D1.8", "Garrafao do Norte - PA / Capitao Poco - C1.2", "Igarape Acu - PA / Castanhal - B2.2", "Igarape Miri - PA / Igarape Miri - G1", "Inhangapi - PA / Castanhal - B2.3", "Ipixuna do Para - PA / Paragominas - D1.6", "Irituia - PA / Paragominas - D1.3", "Mae do Rio - PA / Paragominas - D1.4", "Magalhaes Barata - PA / Castanhal - B2.2", "Maracana - PA / Castanhal - B2.2", "Marapanim - PA / Castanhal - B2.1", "Marituba / Belém - A1.2", "Maruda - PA / Castanhal - B2.1", "Mocajuba - PA / Igarape Miri - G1.3", "Mosqueiro / Belém - A1.4", "Nova Esperança do Piria - PA / Capitao Poco - C1.3", "Nova Timboteua - PA / Castanhal - B2.2", "Oeiras do Para - PA / Igarape Miri - G1.3", "Ourem - PA / Capitao Poco - C1.1", "Paragominas - PA / Paragominas - D1", "Peixe Boi - PA / Castanhal - B2.2", "Primavera - PA / Salinopolis - B4.2", "Quatipuru - PA / Salinopolis - B4.2", "Salinopolis - PA / Salinopolis - B4", "Santa Isabel do Para - PA / Santa Isabel - B1", "Santa Luzia do Para - PA / Capanema - B3.2", "Santa Maria do Para - PA / Paragominas - D1.1", "Santarem Novo - PA / Salinopolis - B4.1", "Sao Francisco do Para - PA / Castanhal - B2.2", "Sao Joao da Ponta - PA / Castanhal - B2.1", "Sao Joao de Pirabas - PA / Salinopolis - B4.1", "Sao Miguel do Guama - PA / Paragominas - D1.2", "SaoDomingos do Capim - PA / Castanhal - B2.3", "Sta Barbara / Belém - A1.4", "Terra Alta - PA / Castanhal - B2.1", "Tracuateua - PA / Capanema - B3.4", "Ulianopolis - PA / Paragominas - D1.7", "Vigia  / Belém - A1.5", "Viseu - PA / Capanema - B3.5"];
+const SEED_CLASSIFICACAO = ["Administrativa", "Ativo - Antecipado", "Ativo - Antecipado Possui Lj Agregada", "Ativo - Com LCredito", "Ativo - TOP 10", "Inadimplente", "Inativo - Compra c/outro CNPJ", "Inativo - Compra Limitada fica sem preço", "Inativo - Distribuidor Autoluks", "Inativo - Pesquisa Preço", "Inativo - Preferencia outra Marca", "Inativo - Segmento Adverso", "Inativo - Sem LCredito", "Potencial", "Potencial - Preferencia outra marca", "Loja de representante/familiar"];
+const SEED_ROTAS = [{"id": "ROT123", "municipio": "Belem / Grd Belem - A1"}, {"id": "ROT124", "municipio": "Ananindeua / Grd Belem - A1.2"}, {"id": "ROT125", "municipio": "Icoaraci / Grd Belem - A1.1"}, {"id": "ROT126", "municipio": "Marituba / Grd Belem - A1.2"}, {"id": "ROT127", "municipio": "Mosqueiro / Grd Belem - A1.1"}, {"id": "ROT128", "municipio": "Santa Barbara / Grd Belem - A1.1"}, {"id": "ROT129", "municipio": "Americano / Santa Isabel - B1"}, {"id": "ROT130", "municipio": "Benevides / Santa Isabel - B1.3"}, {"id": "ROT131", "municipio": "Colares / Santa Isabel - B1.1"}, {"id": "ROT132", "municipio": "Santa Isabel do Para / Santa Isabel - B1"}, {"id": "ROT133", "municipio": "Santo Antonio do Taua / Santa Isabel - B1.1"}, {"id": "ROT134", "municipio": "Sao Caetano de Odivelas / Santa Isabel - B1.2"}, {"id": "ROT135", "municipio": "Vigia / Santa Isabel - B1.1"}, {"id": "ROT136", "municipio": "Castanhal / Castanhal - C1"}, {"id": "ROT137", "municipio": "Curuca / Castanhal - C1.2"}, {"id": "ROT138", "municipio": "Igarape Acu / Castanhal - C1.3"}, {"id": "ROT139", "municipio": "Inhangapi / Castanhal - C1.3"}, {"id": "ROT140", "municipio": "Magalhaes Barata / Castanhal - C1.3"}, {"id": "ROT141", "municipio": "Maracana / Castanhal - C1.3"}, {"id": "ROT142", "municipio": "Marapanim / Castanhal - C1.2"}, {"id": "ROT143", "municipio": "Maruda / Castanhal - C1.2"}, {"id": "ROT144", "municipio": "Nova Timboteua / Castanhal - C1.3"}, {"id": "ROT145", "municipio": "Peixe boi / Castanhal - C1.3"}, {"id": "ROT146", "municipio": "Sao Francisco do Para / Castanhal - C1.3"}, {"id": "ROT147", "municipio": "Sao Joao da Ponta / Castanhal - C1.2"}, {"id": "ROT148", "municipio": "São Domingos do Capim / Castanhal - C1.4"}, {"id": "ROT149", "municipio": "Terra Alta / Castanhal - C1.2"}, {"id": "ROT150", "municipio": "Bonito / Capanema - D1.2"}, {"id": "ROT151", "municipio": "Cachoeira do Piria / Capanema - D1.2"}, {"id": "ROT152", "municipio": "Capanema / Capanema -D1"}, {"id": "ROT153", "municipio": "Santa Luzia do Para / Capanema - D1.2"}, {"id": "ROT154", "municipio": "Augusto Correa / Bragança - E1.2"}, {"id": "ROT155", "municipio": "Braganca / Bragança - E1"}, {"id": "ROT156", "municipio": "Tracuateua / Bragança - E1.2"}, {"id": "ROT157", "municipio": "Viseu / Bragança - E1.2"}, {"id": "ROT158", "municipio": "Primavera / Salinopolis - F1.2"}, {"id": "ROT159", "municipio": "Quatipuru / Salinopolis - F1.2"}, {"id": "ROT160", "municipio": "Salinopolis / Salinopolis - F1"}, {"id": "ROT161", "municipio": "Santarem Novo / Salinopolis - F1.2"}, {"id": "ROT162", "municipio": "Sao Joao de Pirabas / Salinopolis - F1.2"}, {"id": "ROT163", "municipio": "Capitao Poco / Capitao Poco - G1"}, {"id": "ROT164", "municipio": "Garrafao do Norte / Capitao Poco - G1.2"}, {"id": "ROT165", "municipio": "Nova Esperança do Piria / Capitao Poco - G1.2"}, {"id": "ROT166", "municipio": "Ourem / Capitao Poco - G1.2"}, {"id": "ROT167", "municipio": "Aurora do Para / Paragominas - H1.1"}, {"id": "ROT168", "municipio": "Ipixuna do Para / Paragominas - H1.1"}, {"id": "ROT169", "municipio": "Irituia / Paragominas - H1.1"}, {"id": "ROT170", "municipio": "Mae do Rio / Paragominas - H1.1"}, {"id": "ROT171", "municipio": "Paragominas / Paragominas - H1"}, {"id": "ROT172", "municipio": "Santa Maria do Para / Paragominas - H1.1"}, {"id": "ROT173", "municipio": "Sao Miguel do Guama / Paragominas - H1.1"}, {"id": "ROT174", "municipio": "Ulianopolis / Paragominas - H1.1"}, {"id": "ROT175", "municipio": "Palmares / Tailandia - J1.1"}, {"id": "ROT176", "municipio": "Tailandia / Tailandia - J1"}, {"id": "ROT177", "municipio": "Acara / Tome Acu - K1.1"}, {"id": "ROT178", "municipio": "Bujaru / Tome Acu - K1.1"}, {"id": "ROT179", "municipio": "Concordia do Para / Tome Acu - K1.1"}, {"id": "ROT180", "municipio": "Moju / Tome Acu - K1.1"}, {"id": "ROT181", "municipio": "Tome Acu / Tome Acu - K1"}, {"id": "ROT182", "municipio": "Cameta / Igarape Miri - L1.1"}, {"id": "ROT183", "municipio": "Igarape Miri / Igarape Miri - L1"}, {"id": "ROT184", "municipio": "Mocajuba / Igarape Miri - L1.1"}, {"id": "ROT185", "municipio": "Baião / Igarape Miri - L1.1"}, {"id": "ROT186", "municipio": "Abaetetuba / Abaetetuba - M1"}, {"id": "ROT187", "municipio": "Barcarena / Abaetetuba - M1.1"}, {"id": "ROT188", "municipio": "Vila dos Cabanos / Abaetetuba - M1.1"}];
+const REGIOES = Array.from({length:14}, (_,i)=>String(207+i)); // 207..220
+
+/* ===================== FIELD DEFINITIONS ===================== */
+const FIELD_LABELS = {
+  cliente:'Cliente', nomeFantasia:'Nome Fantasia', municipio:'Município', regiao:'Região',
+  rota:'Rota', classificacao:'Classificação', condPgto:'Condição de Pagamento',
+  cnpj:'CNPJ', inscEstadual:'Insc. Estadual', endereco:'Endereço',
+  fixo:'Fixo', celular:'Celular', celularII:'Celular II', emailLoja:'Email Loja', emailNF:'Email NF',
+  codLj:'Cód. Loja', proprietario:'Proprietário', cpfProp:'CPF Proprietário', identProp:'Identidade Proprietário',
+  anivProp:'Aniv. Proprietário', administrador:'Administrador', anivAdm:'Aniv. Administrador', mimo:'Mimo'
+};
+
+/* ===================== STATE ===================== */
+let municipiosList = [];
+let classificacaoList = [];
+let rotasList = [];
+let clientesIndex = [];
+let servicosList = [];
+let activeTab = 'cadastrar';
+let consultaSelectedId = null;
+let consultaEditMode = false;
+let draftImages = { imagensInt:[], imagensExt:[], imagensGoogle:[], imagensEquipamentos:[], imagensServico:[] };
+
+/* ===================== STORAGE HELPERS ===================== */
+async function storeGet(key){
+  try{
+    const r = await window.storage.get(key, false);
+    return r ? r.value : null;
+  }catch(e){ return null; }
+}
+function sleep(ms){ return new Promise(resolve=>setTimeout(resolve, ms)); }
+async function storeSet(key, value, attempt){
+  attempt = attempt || 0;
+  try{ await window.storage.set(key, value, false); return true; }
+  catch(e){
+    if(attempt < 4){ await sleep(400 * (attempt+1)); return storeSet(key, value, attempt+1); }
+    console.error('storage set failed after retries', key, e);
+    return false;
+  }
+}
+async function storeDelete(key, attempt){
+  attempt = attempt || 0;
+  try{ await window.storage.delete(key, false); return true; }
+  catch(e){
+    if(attempt < 4){ await sleep(400 * (attempt+1)); return storeDelete(key, attempt+1); }
+    return false;
+  }
+}
+async function loadListKey(key){
+  const raw = await storeGet(key);
+  if(raw===null) return null;
+  try{ return JSON.parse(raw); }catch(e){ return null; }
+}
+
+const SEED_CLIENTES_BY_ID = {};
+SEED_CLIENTES.forEach(rec=>{ SEED_CLIENTES_BY_ID[rec.id] = rec; });
+
+/* ===================== SEEDING ===================== */
+async function ensureSeeded(){
+  let m = await loadListKey('municipios-list');
+  if(m===null){ m = SEED_MUNICIPIOS.slice(); await storeSet('municipios-list', JSON.stringify(m)); }
+  municipiosList = m;
+
+  let c = await loadListKey('classificacao-list');
+  if(c===null){ c = SEED_CLASSIFICACAO.slice(); await storeSet('classificacao-list', JSON.stringify(c)); }
+  classificacaoList = c;
+
+  let r = await loadListKey('rotas-list');
+  if(r===null){ r = SEED_ROTAS.slice(); await storeSet('rotas-list', JSON.stringify(r)); }
+  rotasList = r;
+
+  let idx = await loadListKey('clientes-index');
+  if(idx===null){
+    idx = SEED_CLIENTES.map(rec=>buildIndexEntry(rec));
+    await storeSet('clientes-index', JSON.stringify(idx));
+  }
+  clientesIndex = idx;
+
+  let s = await loadListKey('servicos-list');
+  if(s===null){ s = []; await storeSet('servicos-list', JSON.stringify(s)); }
+  servicosList = s;
+}
+
+/* Loads a client's full record, materializing it from the original spreadsheet
+   seed on first access (instead of writing all records upfront on load). */
+async function getClientRecord(id){
+  const raw = await storeGet('cliente:'+id);
+  if(raw){
+    try{ return JSON.parse(raw); }catch(e){ /* fall through */ }
+  }
+  const seedRec = SEED_CLIENTES_BY_ID[id];
+  if(seedRec){
+    storeSet('cliente:'+id, JSON.stringify(seedRec)); // fire-and-forget, no need to block the view
+    return seedRec;
+  }
+  return null;
+}
+
+/* ===================== UTIL ===================== */
+function uid(){ return Math.random().toString(16).slice(2,10); }
+function esc(s){ return (s===undefined||s===null)? '' : String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function normalize(s){ return (s||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,''); }
+function toast(msg){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(()=>el.classList.remove('show'), 2600);
+}
+function openModal(html){
+  const root = document.getElementById('modalRoot');
+  root.innerHTML = '<div class="modal-overlay" id="modalOverlay">'+html+'</div>';
+  document.getElementById('modalOverlay').addEventListener('click', (e)=>{
+    if(e.target.id==='modalOverlay') closeModal();
+  });
+}
+function closeModal(){ document.getElementById('modalRoot').innerHTML=''; }
+function confirmAction(message, onConfirm){
+  openModal(`
+    <div class="modal-box">
+      <p>${esc(message)}</p>
+      <div class="modal-actions">
+        <button class="btn btn-outline" onclick="closeModal()">Cancelar</button>
+        <button class="btn btn-warn" id="modalConfirmBtn">Confirmar</button>
+      </div>
+    </div>
+  `);
+  document.getElementById('modalConfirmBtn').addEventListener('click', async ()=>{
+    closeModal();
+    await onConfirm();
+  });
+}
+
+function datalistOptions(id, arr){
+  return `<datalist id="${id}">` + arr.map(v=>`<option value="${esc(v)}">`).join('') + `</datalist>`;
+}
+function selectOptions(arr, selected){
+  return arr.map(v=>`<option value="${esc(v)}" ${v===selected?'selected':''}>${esc(v)}</option>`).join('');
+}
+
+/* ===================== IMAGE HANDLING ===================== */
+function readAndCompressImage(file, maxWidth){
+  maxWidth = maxWidth || 1000;
+  return new Promise((resolve, reject)=>{
+    const reader = new FileReader();
+    reader.onerror = ()=>reject(new Error('read fail'));
+    reader.onload = ()=>{
+      const img = new Image();
+      img.onerror = ()=>reject(new Error('img fail'));
+      img.onload = ()=>{
+        let w = img.width, h = img.height;
+        if(w > maxWidth){ h = Math.round(h * (maxWidth/w)); w = maxWidth; }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, w, h);
+        resolve(canvas.toDataURL('image/jpeg', 0.72));
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+function photoAddControlHTML(fieldKey, isFirst){
+  if(isFirst){
+    return `
+      <label class="photo-placeholder" title="Adicionar foto">
+        <span class="ic">📷</span>
+        <span class="txt">Adicionar foto</span>
+        <input type="file" accept="image/*" multiple style="display:none" onchange="handlePhotoInput(event, '${fieldKey}')">
+      </label>
+    `;
+  }
+  return `
+    <label class="photo-add-round" title="Adicionar outra foto">
+      +
+      <input type="file" accept="image/*" multiple style="display:none" onchange="handlePhotoInput(event, '${fieldKey}')">
+    </label>
+  `;
+}
+function photoRowHTML(fieldKey, label){
+  const imgs = draftImages[fieldKey] || [];
+  let thumbs = imgs.map((src, i)=>`
+    <div class="photo-thumb">
+      <img src="${src}">
+      <button class="rm" type="button" onclick="removePhoto('${fieldKey}', ${i})">×</button>
+    </div>
+  `).join('');
+  return `
+    <div class="field" style="grid-column:1/-1;">
+      <div class="photo-label">${esc(label)}</div>
+      <div class="photo-row" id="row_${fieldKey}">
+        ${thumbs}
+        ${photoAddControlHTML(fieldKey, imgs.length===0)}
+      </div>
+    </div>
+  `;
+}
+async function handlePhotoInput(evt, fieldKey){
+  const files = Array.from(evt.target.files || []);
+  if(!files.length) return;
+  toast('Processando foto(s)…');
+  for(const f of files){
+    try{
+      const dataUrl = await readAndCompressImage(f, 1000);
+      draftImages[fieldKey].push(dataUrl);
+    }catch(e){ console.error(e); }
+  }
+  evt.target.value = '';
+  refreshPhotoRow(fieldKey);
+}
+function removePhoto(fieldKey, i){
+  draftImages[fieldKey].splice(i,1);
+  refreshPhotoRow(fieldKey);
+}
+function refreshPhotoRow(fieldKey){
+  const row = document.getElementById('row_'+fieldKey);
+  if(!row) return;
+  const imgs = draftImages[fieldKey] || [];
+  let thumbs = imgs.map((src, i)=>`
+    <div class="photo-thumb">
+      <img src="${src}">
+      <button class="rm" type="button" onclick="removePhoto('${fieldKey}', ${i})">×</button>
+    </div>
+  `).join('');
+  row.innerHTML = thumbs + photoAddControlHTML(fieldKey, imgs.length===0);
+}
+
+/* ===================== EQUIPAMENTOS (MÁQUINA / BALANÇA) ===================== */
+function equipBlockHTML(key, label, rec){
+  rec = rec || {};
+  const possui = rec[key+'Possui'] || 'nao';
+  const tipo = rec[key+'Tipo'] || '';
+  const qtd = rec[key+'Qtd'] || '';
+  const show = possui === 'sim';
+  return `
+    <div class="field equip-block">
+      <label>${esc(label)}</label>
+      <select class="possui" id="f_${key}Possui" onchange="toggleEquip('${key}')">
+        <option value="nao" ${possui==='nao'?'selected':''}>Não</option>
+        <option value="sim" ${possui==='sim'?'selected':''}>Sim</option>
+      </select>
+      <div class="equip-details" id="details_${key}" style="display:${show?'flex':'none'}">
+        <select id="f_${key}Tipo">
+          <option value="">Tipo de posse</option>
+          <option value="Comodato" ${tipo==='Comodato'?'selected':''}>Comodato</option>
+          <option value="Outras" ${tipo==='Outras'?'selected':''}>Outras</option>
+          <option value="Propria" ${tipo==='Propria'?'selected':''}>Própria</option>
+        </select>
+        <input type="number" id="f_${key}Qtd" value="${esc(qtd)}" min="0" step="1" placeholder="Quantidade">
+      </div>
+    </div>
+  `;
+}
+function toggleEquip(key){
+  const sel = document.getElementById('f_'+key+'Possui');
+  const box = document.getElementById('details_'+key);
+  if(sel && box) box.style.display = sel.value === 'sim' ? 'flex' : 'none';
+}
+const EQUIP_KEYS = ['maqSkylack','maqSkyfrota','balanca'];
+const EQUIP_LABELS = {maqSkylack:'Máquina Skylack', maqSkyfrota:'Máquina Skyfrota', balanca:'Balança'};
+function buildIndexEntry(rec){
+  const entry = {id:rec.id, cliente:rec.cliente, municipio:rec.municipio, classificacao:rec.classificacao};
+  EQUIP_KEYS.forEach(k=>{
+    entry[k+'Possui'] = rec[k+'Possui'] || 'nao';
+    entry[k+'Qtd'] = rec[k+'Qtd'] || '';
+  });
+  entry.obsEquipamentos = rec.obsEquipamentos || '';
+  return entry;
+}
+
+async function confirmarEndereco(){
+  const el = document.getElementById('f_endereco');
+  const btn = document.getElementById('btnConfirmAddr');
+  const original = (el.value || '').trim();
+  if(!original){ toast('Digite ao menos parte do endereço antes de confirmar.'); return; }
+  const originalLabel = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spinner"></span> Confirmando…';
+  try{
+    const prompt = 'Você confirma e completa endereços brasileiros. A partir do texto abaixo, que pode estar incompleto ou abreviado, identifique o endereço real (pode pesquisar na web) e responda APENAS com o endereço completo formatado exatamente assim, sem nenhuma explicação ou texto adicional: Logradouro, Número - Bairro, Cidade - UF, CEP, Brasil. Se não encontrar o CEP ou algum dado, omita apenas essa parte mas mantenha o restante do formato. Texto informado: "' + original.replace(/"/g,"'") + '"';
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({
+        model:'claude-sonnet-4-6',
+        max_tokens:300,
+        messages:[{role:'user', content:prompt}],
+        tools:[{type:'web_search_20250305', name:'web_search'}]
+      })
+    });
+    const data = await resp.json();
+    const text = (data.content || []).filter(b=>b.type==='text').map(b=>b.text||'').join(' ').trim();
+    if(text){
+      el.value = text;
+      toast('Endereço confirmado.');
+    }else{
+      toast('Não foi possível confirmar o endereço agora. Tente novamente.');
+    }
+  }catch(e){
+    console.error(e);
+    toast('Erro ao confirmar endereço. Tente novamente em instantes.');
+  }
+  btn.disabled = false;
+  btn.innerHTML = originalLabel;
+}
+
+/* ===================== CLIENT FORM ===================== */
+function clientFormHTML(rec, mode){
+  rec = rec || {};
+  const v = (k)=>esc(rec[k]||'');
+  return `
+    <div class="card">
+      <div class="section-title">Identificação</div>
+      <div class="field-grid">
+        <div class="field required"><label>Cliente</label>
+          <input type="text" id="f_cliente" value="${v('cliente')}" placeholder="Nome da loja">
+        </div>
+        <div class="field"><label>Nome Fantasia</label>
+          <input type="text" id="f_nomeFantasia" value="${v('nomeFantasia')}">
+        </div>
+        <div class="field"><label>Município</label>
+          <input type="text" id="f_municipio" list="dl_municipios" value="${v('municipio')}" placeholder="Selecione ou digite">
+          ${datalistOptions('dl_municipios', municipiosList)}
+        </div>
+        <div class="field"><label>Região</label>
+          <select id="f_regiao">
+            <option value="">—</option>
+            ${selectOptions(REGIOES, rec.regiao||'')}
+          </select>
+        </div>
+        <div class="field"><label>Rota</label>
+          <input type="text" id="f_rota" list="dl_rotas" value="${v('rota')}" placeholder="Selecione ou digite">
+          ${datalistOptions('dl_rotas', rotasList.map(r=>r.municipio))}
+        </div>
+        <div class="field"><label>Classificação</label>
+          <input type="text" id="f_classificacao" list="dl_classif" value="${v('classificacao')}" placeholder="Selecione ou digite">
+          ${datalistOptions('dl_classif', classificacaoList)}
+        </div>
+        <div class="field"><label>Cód. Loja</label>
+          <input type="text" id="f_codLj" value="${v('codLj')}">
+        </div>
+        <div class="field"><label>Condição de Pagamento</label>
+          <input type="text" id="f_condPgto" value="${v('condPgto')}" placeholder="Ex: 28 dias">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Documentação</div>
+      <div class="field-grid">
+        <div class="field"><label>CNPJ</label>
+          <input type="text" id="f_cnpj" value="${v('cnpj')}" placeholder="00.000.000/0000-00">
+        </div>
+        <div class="field"><label>Insc. Estadual</label>
+          <input type="text" id="f_inscEstadual" value="${v('inscEstadual')}">
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Equipamentos</div>
+      <div class="field-grid">
+        ${equipBlockHTML('maqSkylack', 'Cliente possui Máquina Skylack?', rec)}
+        ${equipBlockHTML('maqSkyfrota', 'Cliente possui Máquina Skyfrota?', rec)}
+        ${equipBlockHTML('balanca', 'Cliente possui Balança?', rec)}
+      </div>
+      <div class="field-grid single" style="margin-top:10px;">
+        <div class="field">
+          <label>Observações sobre os equipamentos</label>
+          <textarea id="f_obsEquipamentos" style="min-height:90px;">${v('obsEquipamentos')}</textarea>
+        </div>
+        ${photoRowHTML('imagensEquipamentos', 'Fotos dos equipamentos')}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Endereço</div>
+      <div class="field-grid single">
+        <div class="field">
+          <label>Endereço</label>
+          <div class="addr-row">
+            <textarea id="f_endereco">${v('endereco')}</textarea>
+            <button class="btn btn-accent btn-confirm-addr" id="btnConfirmAddr" type="button" onclick="confirmarEndereco()">Confirmar endereço</button>
+          </div>
+          <div class="helptext">Digite o que souber do endereço e clique em "Confirmar endereço" para completar automaticamente (consome uso da sua conta Claude).</div>
+        </div>
+        ${photoRowHTML('imagensGoogle', 'Imagem do local (Google/Maps)')}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Contato</div>
+      <div class="field-grid">
+        <div class="field"><label>Fixo</label><input type="tel" id="f_fixo" value="${v('fixo')}"></div>
+        <div class="field"><label>Celular</label><input type="tel" id="f_celular" value="${v('celular')}"></div>
+        <div class="field"><label>Celular II</label><input type="tel" id="f_celularII" value="${v('celularII')}"></div>
+        <div class="field"><label>Email Loja</label><input type="email" id="f_emailLoja" value="${v('emailLoja')}"></div>
+        <div class="field"><label>Email NF</label><input type="email" id="f_emailNF" value="${v('emailNF')}"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Proprietário &amp; Administrador</div>
+      <div class="field-grid">
+        <div class="field"><label>Proprietário</label><input type="text" id="f_proprietario" value="${v('proprietario')}"></div>
+        <div class="field"><label>CPF Proprietário</label><input type="text" id="f_cpfProp" value="${v('cpfProp')}"></div>
+        <div class="field"><label>Identidade Proprietário</label><input type="text" id="f_identProp" value="${v('identProp')}"></div>
+        <div class="field"><label>Aniv. Proprietário</label><input type="date" id="f_anivProp" value="${v('anivProp')}"></div>
+        <div class="field"><label>Administrador</label><input type="text" id="f_administrador" value="${v('administrador')}"></div>
+        <div class="field"><label>Aniv. Administrador</label><input type="date" id="f_anivAdm" value="${v('anivAdm')}"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Observações</div>
+      <div class="field-grid single">
+        <div class="field"><label>Mimo (brindes fornecidos)</label><textarea id="f_mimo">${v('mimo')}</textarea></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Fotos da Loja</div>
+      <div class="field-grid single">
+        ${photoRowHTML('imagensInt', 'Foto interna')}
+        ${photoRowHTML('imagensExt', 'Foto externa')}
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn-outline" type="button" onclick="${mode==='edit' ? 'cancelEdit()' : 'resetCadastroForm()'}">Cancelar</button>
+      <button class="btn btn-accent" type="button" onclick="${mode==='edit' ? "submitClientForm('edit','"+rec.id+"')" : "submitClientForm('new')"}">${mode==='edit' ? 'Salvar alterações' : 'Salvar cliente'}</button>
+    </div>
+  `;
+}
+
+function collectFormData(existingId){
+  const ids = ['cliente','nomeFantasia','municipio','regiao','rota','classificacao','codLj','condPgto',
+    'cnpj','inscEstadual','endereco','fixo','celular','celularII','emailLoja','emailNF',
+    'proprietario','cpfProp','identProp','anivProp','administrador','anivAdm','mimo',
+    'maqSkylackPossui','maqSkylackTipo','maqSkylackQtd',
+    'maqSkyfrotaPossui','maqSkyfrotaTipo','maqSkyfrotaQtd',
+    'balancaPossui','balancaTipo','balancaQtd','obsEquipamentos'];
+  const rec = { id: existingId || uid() };
+  ids.forEach(k=>{
+    const el = document.getElementById('f_'+k);
+    rec[k] = el ? el.value.trim() : '';
+  });
+  rec.imagensInt = draftImages.imagensInt.slice();
+  rec.imagensExt = draftImages.imagensExt.slice();
+  rec.imagensGoogle = draftImages.imagensGoogle.slice();
+  rec.imagensEquipamentos = draftImages.imagensEquipamentos.slice();
+  rec.obsImagens = '';
+  EQUIP_KEYS.forEach(k=>{
+    if(rec[k+'Possui'] !== 'sim'){
+      rec[k+'Tipo'] = '';
+      rec[k+'Qtd'] = '';
+    }
+  });
+  return rec;
+}
+
+async function submitClientForm(mode, existingId){
+  const clienteEl = document.getElementById('f_cliente');
+  if(!clienteEl.value.trim()){
+    toast('Informe o nome do Cliente antes de salvar.');
+    clienteEl.focus();
+    return;
+  }
+  const rec = collectFormData(mode==='edit' ? existingId : null);
+  await storeSet('cliente:'+rec.id, JSON.stringify(rec));
+  if(mode==='edit'){
+    const i = clientesIndex.findIndex(c=>c.id===rec.id);
+    if(i>=0) clientesIndex[i] = buildIndexEntry(rec);
+  }else{
+    clientesIndex.push(buildIndexEntry(rec));
+  }
+  await storeSet('clientes-index', JSON.stringify(clientesIndex));
+  toast(mode==='edit' ? 'Cliente atualizado.' : 'Cliente cadastrado.');
+  if(mode==='edit'){
+    consultaEditMode = false;
+    consultaSelectedId = rec.id;
+    renderContent();
+  }else{
+    resetCadastroForm();
+  }
+}
+
+function resetCadastroForm(){
+  draftImages = { imagensInt:[], imagensExt:[], imagensGoogle:[], imagensEquipamentos:[], imagensServico:[] };
+  renderContent();
+}
+function cancelEdit(){
+  consultaEditMode = false;
+  renderContent();
+}
+
+/* ===================== CONSULTAR ===================== */
+function renderConsultarTab(){
+  if(consultaSelectedId){
+    return renderFicha(consultaSelectedId);
+  }
+  return `
+    <div class="card">
+      <div class="section-title">Buscar Cliente</div>
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Digite o nome do cliente..." oninput="handleSearchInput()" autofocus>
+      </div>
+      <div class="result-list" id="resultList">${searchResultsHTML('')}</div>
+    </div>
+  `;
+}
+function searchResultsHTML(query){
+  const q = normalize(query);
+  let list = clientesIndex;
+  if(q){
+    list = clientesIndex.filter(c=>normalize(c.cliente).includes(q));
+  }
+  list = list.slice().sort((a,b)=>a.cliente.localeCompare(b.cliente,'pt-BR'));
+  if(!list.length){
+    return `<div class="empty-state"><div class="big">🔎</div>Nenhum cliente encontrado.</div>`;
+  }
+  const shown = q ? list : list.slice(0,25);
+  let extra = (!q && list.length>25) ? `<div class="helptext" style="text-align:center;margin-top:6px;">Mostrando 25 de ${list.length}. Digite para refinar a busca.</div>` : '';
+  return shown.map(c=>`
+    <button class="result-item" onclick="selectCliente('${c.id}')">
+      <span>
+        <div class="name">${esc(c.cliente)}</div>
+        <div class="meta">${esc(c.municipio||'—')} ${c.classificacao? '· '+esc(c.classificacao):''}</div>
+      </span>
+      <span class="tag-chip mono"><span class="dot"></span><span>${esc(c.id)}</span></span>
+    </button>
+  `).join('') + extra;
+}
+function handleSearchInput(){
+  const q = document.getElementById('searchInput').value;
+  document.getElementById('resultList').innerHTML = searchResultsHTML(q);
+}
+function selectCliente(id){
+  consultaSelectedId = id;
+  consultaEditMode = false;
+  renderContent();
+}
+function backToSearch(){
+  consultaSelectedId = null;
+  consultaEditMode = false;
+  renderContent();
+}
+
+let fichaCache = {};
+async function renderFicha(id){
+  let rec = fichaCache[id];
+  if(!rec){
+    rec = await getClientRecord(id);
+    if(!rec){ consultaSelectedId=null; return '<div class="empty-state">Cliente não encontrado.</div>'; }
+    fichaCache[id] = rec;
+  }
+  if(consultaEditMode){
+    draftImages = {
+      imagensInt: (rec.imagensInt||[]).slice(),
+      imagensExt: (rec.imagensExt||[]).slice(),
+      imagensGoogle: (rec.imagensGoogle||[]).slice(),
+      imagensEquipamentos: (rec.imagensEquipamentos||[]).slice(),
+      imagensServico: []
+    };
+    return `
+      <div class="form-actions" style="justify-content:flex-start;margin-bottom:10px;">
+        <button class="btn btn-outline btn-sm" onclick="backToSearch()">← Voltar à busca</button>
+      </div>
+      ${clientFormHTML(rec, 'edit')}
+    `;
+  }
+  const fields = Object.keys(FIELD_LABELS);
+  const fichaRows = fields.map(k=>{
+    const val = rec[k];
+    return `<div class="ficha-item"><div class="k">${FIELD_LABELS[k]}</div><div class="v ${val?'':'empty'}">${val?esc(val):'não informado'}</div></div>`;
+  }).join('');
+  const equipRows = EQUIP_KEYS.map(k=>{
+    const possui = rec[k+'Possui']==='sim';
+    const txt = possui ? `Sim — ${rec[k+'Tipo']||'—'} — Qtd: ${rec[k+'Qtd']||'0'}` : 'Não';
+    return `<div class="ficha-item"><div class="k">${EQUIP_LABELS[k]}</div><div class="v ${possui?'':'empty'}">${esc(txt)}</div></div>`;
+  }).join('');
+  const photos = ['imagensInt','imagensExt','imagensGoogle','imagensEquipamentos'].map(k=>(rec[k]||[]).map(src=>`<img src="${src}">`).join('')).join('');
+  return `
+    <div class="form-actions" style="justify-content:flex-start;margin-bottom:10px;">
+      <button class="btn btn-outline btn-sm" onclick="backToSearch()">← Voltar à busca</button>
+    </div>
+    <div class="card">
+      <div class="ficha-header">
+        <div>
+          <h2>${esc(rec.cliente)}</h2>
+          <div class="chips">
+            <span class="tag-chip mono"><span class="dot"></span><span>${esc(rec.id)}</span></span>
+            ${rec.rota?`<span class="tag-chip">${esc(rec.rota)}</span>`:''}
+            ${rec.regiao?`<span class="tag-chip mono">Região <span>${esc(rec.regiao)}</span></span>`:''}
+          </div>
+        </div>
+        <div class="form-actions" style="margin:0;">
+          <button class="btn btn-outline btn-sm" onclick="startEditFicha()">Editar</button>
+          <button class="btn btn-warn btn-sm" onclick="deleteFicha('${rec.id}')">Excluir</button>
+        </div>
+      </div>
+      <div class="ficha-grid">${fichaRows}</div>
+      <div class="section-title" style="margin-top:14px;">Equipamentos</div>
+      <div class="ficha-grid">${equipRows}</div>
+      ${rec.obsEquipamentos ? `<div class="ficha-item" style="margin-top:8px;"><div class="k">Observações sobre os equipamentos</div><div class="v">${esc(rec.obsEquipamentos).replace(/\n/g,'<br>')}</div></div>` : ''}
+      ${photos ? `<div class="section-title" style="margin-top:14px;">Fotos</div><div class="ficha-photos">${photos}</div>` : ''}
+    </div>
+  `;
+}
+function startEditFicha(){
+  consultaEditMode = true;
+  renderContent();
+}
+function deleteFicha(id){
+  confirmAction('Excluir este cliente? Esta ação não pode ser desfeita.', async ()=>{
+    await storeDelete('cliente:'+id);
+    clientesIndex = clientesIndex.filter(c=>c.id!==id);
+    await storeSet('clientes-index', JSON.stringify(clientesIndex));
+    delete fichaCache[id];
+    consultaSelectedId = null;
+    toast('Cliente excluído.');
+    renderContent();
+  });
+}
+
+/* ===================== SIMPLE LIST MANAGERS ===================== */
+function renderMunicipiosTab(){
+  return simpleListManagerHTML({
+    title:'Municípios',
+    inputId:'newMunicipio',
+    placeholder:'Nome do município (ex: Belém / Grande Belém - A0)',
+    items: municipiosList.map(m=>({label:m})),
+    onAdd:'addMunicipio()',
+    onDelete:'removeMunicipio'
+  });
+}
+async function addMunicipio(){
+  const el = document.getElementById('newMunicipio');
+  const val = el.value.trim();
+  if(!val){ toast('Digite o nome do município.'); return; }
+  if(municipiosList.some(m=>normalize(m)===normalize(val))){ toast('Este município já está na lista.'); return; }
+  municipiosList.push(val);
+  await storeSet('municipios-list', JSON.stringify(municipiosList));
+  toast('Município adicionado.');
+  renderContent();
+}
+function removeMunicipio(val){
+  confirmAction('Remover "'+val+'" da lista de municípios?', async ()=>{
+    municipiosList = municipiosList.filter(m=>m!==val);
+    await storeSet('municipios-list', JSON.stringify(municipiosList));
+    toast('Município removido.');
+    renderContent();
+  });
+}
+
+function renderClassificacaoTab(){
+  return simpleListManagerHTML({
+    title:'Classificação',
+    inputId:'newClassificacao',
+    placeholder:'Nova classificação (ex: Ativo - TOP 10)',
+    items: classificacaoList.map(m=>({label:m})),
+    onAdd:'addClassificacao()',
+    onDelete:'removeClassificacao'
+  });
+}
+async function addClassificacao(){
+  const el = document.getElementById('newClassificacao');
+  const val = el.value.trim();
+  if(!val){ toast('Digite a classificação.'); return; }
+  if(classificacaoList.some(m=>normalize(m)===normalize(val))){ toast('Esta classificação já existe.'); return; }
+  classificacaoList.push(val);
+  await storeSet('classificacao-list', JSON.stringify(classificacaoList));
+  toast('Classificação adicionada.');
+  renderContent();
+}
+function removeClassificacao(val){
+  confirmAction('Remover "'+val+'" da lista de classificação?', async ()=>{
+    classificacaoList = classificacaoList.filter(m=>m!==val);
+    await storeSet('classificacao-list', JSON.stringify(classificacaoList));
+    toast('Classificação removida.');
+    renderContent();
+  });
+}
+
+function nextRotaId(){
+  let max = 0;
+  rotasList.forEach(r=>{
+    const m = /(\d+)/.exec(r.id||'');
+    if(m) max = Math.max(max, parseInt(m[1],10));
+  });
+  return 'ROT'+(max+1);
+}
+function renderRotasTab(){
+  const suggested = nextRotaId();
+  return `
+    <div class="card">
+      <div class="section-title">Rotas</div>
+      <div class="list-manager-add">
+        <input type="text" id="newRotaId" placeholder="Código" value="${esc(suggested)}" style="max-width:110px;">
+        <input type="text" id="newRotaMunicipio" placeholder="Município / descrição da rota">
+        <button class="btn btn-accent btn-sm" onclick="addRota()">Adicionar</button>
+      </div>
+      <div class="list-manager-items">
+        ${rotasList.length ? rotasList.map(r=>`
+          <div class="list-manager-row">
+            <span><span class="sub">${esc(r.id)}</span> &nbsp; <span class="txt">${esc(r.municipio)}</span></span>
+            <button class="btn btn-warn btn-sm" onclick="removeRota('${esc(r.id)}')">Excluir</button>
+          </div>
+        `).join('') : '<div class="empty-state">Nenhuma rota cadastrada.</div>'}
+      </div>
+    </div>
+  `;
+}
+async function addRota(){
+  const idEl = document.getElementById('newRotaId');
+  const mEl = document.getElementById('newRotaMunicipio');
+  const id = idEl.value.trim();
+  const municipio = mEl.value.trim();
+  if(!id || !municipio){ toast('Preencha o código e o município da rota.'); return; }
+  if(rotasList.some(r=>r.id===id)){ toast('Já existe uma rota com este código.'); return; }
+  rotasList.push({id, municipio});
+  await storeSet('rotas-list', JSON.stringify(rotasList));
+  toast('Rota adicionada.');
+  renderContent();
+}
+function removeRota(id){
+  confirmAction('Remover a rota "'+id+'"?', async ()=>{
+    rotasList = rotasList.filter(r=>r.id!==id);
+    await storeSet('rotas-list', JSON.stringify(rotasList));
+    toast('Rota removida.');
+    renderContent();
+  });
+}
+
+function simpleListManagerHTML(cfg){
+  return `
+    <div class="card">
+      <div class="section-title">${esc(cfg.title)}</div>
+      <div class="list-manager-add">
+        <input type="text" id="${cfg.inputId}" placeholder="${esc(cfg.placeholder)}">
+        <button class="btn btn-accent btn-sm" onclick="${cfg.onAdd}">Adicionar</button>
+      </div>
+      <div class="list-manager-items">
+        ${cfg.items.length ? cfg.items.map(it=>`
+          <div class="list-manager-row">
+            <span class="txt">${esc(it.label)}</span>
+            <button class="btn btn-warn btn-sm" onclick="${cfg.onDelete}('${esc(it.label).replace(/'/g,"\\'")}')">Excluir</button>
+          </div>
+        `).join('') : '<div class="empty-state">Nenhum item cadastrado.</div>'}
+      </div>
+    </div>
+  `;
+}
+
+/* ===================== SERVIÇOS ===================== */
+const SERVICO_TIPOS = ['Café da Manhã','Curso Volante','Palestra','Ocorrência'];
+const SERVICO_STATUS_NORMAL = ['Reservado','Concluído'];
+const SERVICO_STATUS_OCORRENCIA = ['Informado','Em análise','Procede','Não Procede','Bonificado'];
+
+function formatDateBR(iso){
+  if(!iso) return '';
+  const parts = iso.split('-');
+  if(parts.length!==3) return iso;
+  return parts[2]+'/'+parts[1]+'/'+parts[0];
+}
+
+let servicoEditId = null;
+
+function renderServicosTab(){
+  const clientesOrdenados = clientesIndex.slice().sort((a,b)=>a.cliente.localeCompare(b.cliente,'pt-BR'));
+  const editRec = servicoEditId ? servicosList.find(s=>s.id===servicoEditId) : null;
+  const tipoAtual = editRec ? editRec.tipo : SERVICO_TIPOS[0];
+  const isOcorrencia = tipoAtual === 'Ocorrência';
+  return `
+    <div class="card">
+      <div class="section-title">${editRec ? 'Editar Serviço' : 'Registrar Serviço'}</div>
+      <div class="field-grid">
+        <div class="field required"><label>Cliente</label>
+          <select id="srv_cliente">
+            <option value="">Selecione o cliente</option>
+            ${clientesOrdenados.map(c=>`<option value="${esc(c.id)}" ${editRec && editRec.clienteId===c.id?'selected':''}>${esc(c.cliente)}</option>`).join('')}
+          </select>
+        </div>
+        <div class="field required"><label>Serviço</label>
+          <select id="srv_tipo" onchange="toggleServicoTipo()">
+            ${SERVICO_TIPOS.map(t=>`<option value="${esc(t)}" ${tipoAtual===t?'selected':''}>${esc(t)}</option>`).join('')}
+          </select>
+        </div>
+      </div>
+
+      <div id="srv_ocorrenciaFields" style="display:${isOcorrencia?'block':'none'}">
+        <div class="servico-row">
+          <div class="field"><label>Data Entrada</label><input type="date" id="srv_dataOcorrencia" value="${editRec && isOcorrencia ? esc(editRec.data) : ''}"></div>
+          <div class="field"><label>Status da Ocorrência</label>
+            <select id="srv_statusOcorrencia">
+              ${SERVICO_STATUS_OCORRENCIA.map(s=>`<option value="${esc(s)}" ${editRec && editRec.status===s?'selected':''}>${esc(s)}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+        <div class="field" style="margin-top:10px;">
+          <label>Notas</label>
+          <textarea id="srv_notas" style="min-height:80px;" placeholder="Detalhes da ocorrência...">${editRec && isOcorrencia ? esc(editRec.notas||'') : ''}</textarea>
+          <div class="helptext">Só aparece no relatório se este campo tiver conteúdo.</div>
+        </div>
+      </div>
+
+      <div id="srv_normalFields" style="display:${isOcorrencia?'none':'block'}">
+        <div class="servico-row">
+          <div class="field"><label>Data</label><input type="date" id="srv_data" value="${editRec && !isOcorrencia ? esc(editRec.data) : ''}"></div>
+          <div class="field"><label>Status</label>
+            <select id="srv_status">
+              ${SERVICO_STATUS_NORMAL.map(s=>`<option value="${esc(s)}" ${editRec && editRec.status===s?'selected':''}>${esc(s)}</option>`).join('')}
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-grid single" style="margin-top:10px;">
+        ${photoRowHTML('imagensServico', 'Fotos')}
+      </div>
+
+      <div class="form-actions">
+        ${editRec ? `<button class="btn btn-outline" type="button" onclick="cancelEditServico()">Cancelar</button>` : ''}
+        <button class="btn btn-accent" type="button" onclick="addServico()">${editRec ? 'Salvar Alterações' : 'Adicionar Serviço'}</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-title">Serviços Registrados</div>
+      ${renderServicosListHTML()}
+    </div>
+  `;
+}
+function toggleServicoTipo(){
+  const tipo = document.getElementById('srv_tipo').value;
+  const isOcorrencia = tipo === 'Ocorrência';
+  document.getElementById('srv_ocorrenciaFields').style.display = isOcorrencia ? 'block' : 'none';
+  document.getElementById('srv_normalFields').style.display = isOcorrencia ? 'none' : 'block';
+}
+function renderServicosListHTML(){
+  if(!servicosList.length) return '<div class="empty-state">Nenhum serviço registrado ainda.</div>';
+  const ordenados = servicosList.slice().sort((a,b)=>a.clienteNome.localeCompare(b.clienteNome,'pt-BR'));
+  return ordenados.map(s=>{
+    const thumbs = (s.imagensServico||[]).map(src=>`<img src="${src}" style="width:44px;height:44px;object-fit:cover;border-radius:6px;border:1px solid var(--line);margin-top:6px;margin-right:4px;">`).join('');
+    return `
+    <div class="servico-list-item">
+      <div>
+        <div class="main">${esc(s.clienteNome)} <span class="tag-chip" style="margin-left:6px;">${esc(s.tipo)}</span></div>
+        <div class="meta">${s.data?('Data: '+esc(formatDateBR(s.data))+' · '):''}Status: ${esc(s.status||'—')}</div>
+        ${s.notas ? `<div class="notas">${esc(s.notas)}</div>` : ''}
+        ${thumbs ? `<div>${thumbs}</div>` : ''}
+      </div>
+      <div class="form-actions" style="margin:0;">
+        <button class="btn btn-outline btn-sm" onclick="startEditServico('${s.id}')">Editar</button>
+        <button class="btn btn-warn btn-sm" onclick="removeServico('${s.id}')">Excluir</button>
+      </div>
+    </div>
+  `;
+  }).join('');
+}
+function startEditServico(id){
+  const rec = servicosList.find(s=>s.id===id);
+  if(!rec) return;
+  servicoEditId = id;
+  draftImages.imagensServico = (rec.imagensServico||[]).slice();
+  renderContent();
+}
+function cancelEditServico(){
+  servicoEditId = null;
+  draftImages.imagensServico = [];
+  renderContent();
+}
+async function addServico(){
+  const clienteSel = document.getElementById('srv_cliente');
+  const tipoSel = document.getElementById('srv_tipo');
+  const clienteId = clienteSel.value;
+  if(!clienteId){ toast('Selecione o cliente.'); return; }
+  const clienteEntry = clientesIndex.find(c=>c.id===clienteId);
+  const tipo = tipoSel.value;
+  const rec = { id: servicoEditId || uid(), clienteId, clienteNome: clienteEntry ? clienteEntry.cliente : '', tipo, data:'', status:'', notas:'' };
+  if(tipo === 'Ocorrência'){
+    rec.data = document.getElementById('srv_dataOcorrencia').value;
+    rec.status = document.getElementById('srv_statusOcorrencia').value;
+    rec.notas = document.getElementById('srv_notas').value.trim();
+  }else{
+    rec.data = document.getElementById('srv_data').value;
+    rec.status = document.getElementById('srv_status').value;
+  }
+  rec.imagensServico = draftImages.imagensServico.slice();
+
+  if(servicoEditId){
+    const i = servicosList.findIndex(s=>s.id===servicoEditId);
+    if(i>=0) servicosList[i] = rec;
+    servicoEditId = null;
+  }else{
+    servicosList.push(rec);
+  }
+  await storeSet('servicos-list', JSON.stringify(servicosList));
+  draftImages.imagensServico = [];
+  toast('Serviço salvo.');
+  renderContent();
+}
+function removeServico(id){
+  confirmAction('Excluir este registro de serviço?', async ()=>{
+    servicosList = servicosList.filter(s=>s.id!==id);
+    await storeSet('servicos-list', JSON.stringify(servicosList));
+    toast('Registro excluído.');
+    renderContent();
+  });
+}
+
+/* ===================== RELATÓRIO DE SERVIÇOS ===================== */
+function renderRelatorioServicos(){
+  if(!servicosList.length){
+    return `
+      <div class="card">
+        <div class="section-title">Relatório de Serviços</div>
+        <div class="empty-state">Nenhum serviço registrado ainda.</div>
+      </div>
+    `;
+  }
+  const ordenados = servicosList.slice().sort((a,b)=>a.clienteNome.localeCompare(b.clienteNome,'pt-BR'));
+  const totals = {};
+  SERVICO_TIPOS.forEach(t=>totals[t]=0);
+  ordenados.forEach(s=>{ totals[s.tipo] = (totals[s.tipo]||0) + 1; });
+
+  window.__relatorioServicosData = { ordenados, totals };
+
+  const rows = ordenados.map(s=>`
+    <tr>
+      <td>${esc(s.clienteNome)}</td>
+      <td>${esc(s.tipo)}</td>
+      <td>${esc(formatDateBR(s.data))}</td>
+      <td>${esc(s.status||'—')}</td>
+    </tr>
+    ${s.notas ? `<tr><td></td><td colspan="3" class="helptext" style="font-style:italic;">${esc(s.notas)}</td></tr>` : ''}
+  `).join('');
+
+  const totalsRows = SERVICO_TIPOS.map(t=>`
+    <tr><td>${esc(t)}</td><td class="num" colspan="3">${totals[t]||0}</td></tr>
+  `).join('');
+
+  return `
+    <div class="card">
+      <div class="section-title">Relatório de Serviços</div>
+      <div class="form-actions no-print" style="justify-content:flex-start;margin-bottom:12px;">
+        <button class="btn btn-accent btn-sm" onclick="gerarPdfServicos()">Gerar PDF</button>
+      </div>
+      <table class="report-table">
+        <thead><tr><th>Cliente</th><th>Serviço</th><th>Data</th><th>Status</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <div class="section-title" style="margin-top:18px;">Totais por Serviço</div>
+      <table class="report-table">
+        <tbody>${totalsRows}</tbody>
+      </table>
+    </div>
+  `;
+}
+function gerarPdfServicos(){
+  const data = window.__relatorioServicosData;
+  if(!data || !data.ordenados.length){ toast('Nada para gerar ainda.'); return; }
+
+  const marginX = 40;
+  const pageTop = 790, pageBottom = 50;
+  const lineH = 15;
+  const colX = { cliente:marginX, tipo:230, data:370, status:440 };
+
+  let pages = [];
+  let currentOps = [];
+  let y = pageTop;
+
+  function push(x, yy, text, opts){
+    currentOps.push({x:x, y:yy, text:text, size:(opts&&opts.size)||9, bold: !!(opts&&opts.bold)});
+  }
+  function drawHeader(){
+    push(colX.cliente, y, 'Cliente', {bold:true});
+    push(colX.tipo, y, 'Servico', {bold:true});
+    push(colX.data, y, 'Data', {bold:true});
+    push(colX.status, y, 'Status', {bold:true});
+    y -= lineH;
+  }
+  function newPage(withHeader){
+    pages.push(currentOps);
+    currentOps = [];
+    y = pageTop;
+    if(withHeader) drawHeader();
+  }
+  function ensureSpace(needed, withHeader){
+    if(y - needed < pageBottom){ newPage(withHeader); }
+  }
+
+  push(marginX, y, 'Relatorio de Servicos', {size:15, bold:true});
+  y -= 20;
+  push(marginX, y, 'Rota Norte - Belem / Para', {size:9});
+  y -= 24;
+  drawHeader();
+
+  data.ordenados.forEach(s=>{
+    ensureSpace(lineH, true);
+    push(colX.cliente, y, String(s.clienteNome).slice(0,32));
+    push(colX.tipo, y, s.tipo);
+    push(colX.data, y, formatDateBR(s.data) || '-');
+    push(colX.status, y, s.status || '-');
+    y -= lineH;
+    if(s.notas && s.notas.trim()){
+      ensureSpace(lineH, true);
+      const words = String(s.notas).replace(/\r/g,'').split(/\s+/);
+      let line = '', wrapped = [];
+      words.forEach(w=>{
+        if((line+' '+w).trim().length > 100){ wrapped.push(line.trim()); line = w; }
+        else line = (line+' '+w).trim();
+      });
+      if(line) wrapped.push(line);
+      wrapped.forEach(ln=>{
+        ensureSpace(12, true);
+        push(colX.cliente, y, '  '+ln, {size:8});
+        y -= 12;
+      });
+    }
+  });
+
+  ensureSpace(lineH*(SERVICO_TIPOS.length+2), false);
+  y -= 10;
+  push(marginX, y, 'Totais por Servico', {size:12, bold:true});
+  y -= 18;
+  SERVICO_TIPOS.forEach(t=>{
+    ensureSpace(lineH, false);
+    push(colX.cliente, y, t, {bold:true});
+    push(colX.tipo, y, String(data.totals[t]||0));
+    y -= lineH;
+  });
+
+  pages.push(currentOps);
+  const bytes = buildPdfBytes(pages);
+  downloadPdfBytes(bytes, 'relatorio_servicos.pdf');
+  toast('PDF gerado.');
+}
+
+/* ===================== TABS / RENDER ===================== */
+const MAIN_TABS = [
+  {id:'cadastrar', label:'Cadastrar'},
+  {id:'consultar', label:'Consultar'}
+];
+const MENU_GROUPS = [
+  {
+    label: 'Cadastros Auxiliares',
+    items: [
+      {id:'municipios', label:'Municípios'},
+      {id:'classificacao', label:'Classificação'},
+      {id:'rotas', label:'Rotas'}
+    ]
+  },
+  {
+    label: 'Serviços',
+    items: [
+      {id:'servicos', label:'Registrar Serviço'},
+      {id:'relatorioServicos', label:'Relatório de Serviços'}
+    ]
+  },
+  {
+    label: 'Relatórios',
+    items: [
+      {id:'relatorio', label:'Relatório de Máquinas'}
+    ]
+  }
+];
+const MENU_TABS = MENU_GROUPS.reduce((acc,g)=>acc.concat(g.items), []);
+let menuOpen = false;
+
+function renderTabs(){
+  const inMenu = MENU_TABS.some(t=>t.id===activeTab);
+  const curLabel = inMenu ? (MENU_TABS.find(t=>t.id===activeTab)||{}).label : '';
+  document.getElementById('tabs').innerHTML = `
+    <div class="segmented">
+      ${MAIN_TABS.map(t=>`<button class="seg-btn ${activeTab===t.id?'active':''}" onclick="switchTab('${t.id}')">${t.label}</button>`).join('')}
+    </div>
+    <div class="menu-wrap">
+      <button class="hamburger-btn ${inMenu?'active':''}" onclick="toggleMenu(event)">
+        <span class="bars">☰</span><span>Mais</span>${curLabel?`<span class="cur">· ${esc(curLabel)}</span>`:''}
+      </button>
+      ${menuOpen ? `
+        <div class="dropdown-menu" id="dropdownMenu">
+          ${MENU_GROUPS.map((g,gi)=>`
+            ${gi>0 ? '<div class="dropdown-divider"></div>' : ''}
+            <div class="dropdown-group-label">${esc(g.label)}</div>
+            ${g.items.map(t=>`<button class="${activeTab===t.id?'active':''}" onclick="switchTab('${t.id}')">${t.label}</button>`).join('')}
+          `).join('')}
+        </div>
+      ` : ''}
+    </div>
+  `;
+}
+function toggleMenu(evt){
+  evt.stopPropagation();
+  menuOpen = !menuOpen;
+  renderTabs();
+  if(menuOpen){
+    setTimeout(()=>{
+      document.addEventListener('click', closeMenuOnOutsideClick, {once:true});
+    },0);
+  }
+}
+function closeMenuOnOutsideClick(){
+  if(menuOpen){ menuOpen = false; renderTabs(); }
+}
+function switchTab(id){
+  activeTab = id;
+  menuOpen = false;
+  if(id==='cadastrar'){ draftImages = { imagensInt:[], imagensExt:[], imagensGoogle:[], imagensEquipamentos:[], imagensServico:[] }; }
+  if(id==='consultar'){ consultaSelectedId = null; consultaEditMode = false; }
+  if(id==='servicos'){ draftImages.imagensServico = []; servicoEditId = null; }
+  renderTabs();
+  renderContent();
+}
+
+async function renderContent(){
+  const el = document.getElementById('content');
+  if(activeTab==='cadastrar'){
+    el.innerHTML = statStrip() + clientFormHTML({}, 'new');
+  }else if(activeTab==='consultar'){
+    if(consultaSelectedId){
+      el.innerHTML = '<div class="card"><div class="empty-state">Carregando…</div></div>';
+      el.innerHTML = await renderFicha(consultaSelectedId);
+    }else{
+      el.innerHTML = renderConsultarTab();
+    }
+  }else if(activeTab==='municipios'){
+    el.innerHTML = renderMunicipiosTab();
+  }else if(activeTab==='classificacao'){
+    el.innerHTML = renderClassificacaoTab();
+  }else if(activeTab==='rotas'){
+    el.innerHTML = renderRotasTab();
+  }else if(activeTab==='relatorio'){
+    el.innerHTML = '<div class="card"><div class="empty-state">Calculando relatório…</div></div>';
+    el.innerHTML = await renderRelatorioMaquinas();
+  }else if(activeTab==='servicos'){
+    el.innerHTML = renderServicosTab();
+  }else if(activeTab==='relatorioServicos'){
+    el.innerHTML = renderRelatorioServicos();
+  }
+}
+function statStrip(){
+  return `
+    <div class="stat-strip">
+      <div class="stat-pill"><div class="n">${clientesIndex.length}</div><div class="l">Lojas cadastradas</div></div>
+      <div class="stat-pill"><div class="n">${municipiosList.length}</div><div class="l">Municípios</div></div>
+      <div class="stat-pill"><div class="n">${rotasList.length}</div><div class="l">Rotas</div></div>
+    </div>
+  `;
+}
+
+/* ===================== RELATÓRIO DE MÁQUINAS ===================== */
+async function renderRelatorioMaquinas(){
+  const linhas = [];
+  let totalSkylack = 0, totalSkyfrota = 0, totalBalanca = 0, totalMaquinas = 0;
+  clientesIndex.forEach(rec=>{
+    let qtdSkylack = (rec.maqSkylackPossui==='sim') ? (parseFloat(rec.maqSkylackQtd)||0) : 0;
+    let qtdSkyfrota = (rec.maqSkyfrotaPossui==='sim') ? (parseFloat(rec.maqSkyfrotaQtd)||0) : 0;
+    let qtdBalanca = (rec.balancaPossui==='sim') ? (parseFloat(rec.balancaQtd)||0) : 0;
+    const totalMaquinasLinha = qtdSkylack + qtdSkyfrota; // "Total" = só máquinas, sem a balança
+    if(qtdSkylack + qtdSkyfrota + qtdBalanca > 0){
+      linhas.push({
+        cliente: rec.cliente, municipio: rec.municipio,
+        qtdSkylack, qtdSkyfrota, qtdBalanca, totalMaquinas: totalMaquinasLinha,
+        obs: rec.obsEquipamentos || ''
+      });
+      totalSkylack += qtdSkylack;
+      totalSkyfrota += qtdSkyfrota;
+      totalBalanca += qtdBalanca;
+      totalMaquinas += totalMaquinasLinha;
+    }
+  });
+  linhas.sort((a,b)=>a.cliente.localeCompare(b.cliente,'pt-BR'));
+
+  if(!linhas.length){
+    return `
+      <div class="card">
+        <div class="section-title">Relatório de Máquinas e Balanças</div>
+        <div class="empty-state">Nenhuma loja com equipamentos cadastrados ainda.<br><span class="helptext">Cadastre ou edite uma loja e marque "Sim" em Máquina/Balança para que ela apareça aqui.</span></div>
+      </div>
+    `;
+  }
+
+  const rowsHTML = (esc_)=>linhas.map(l=>`
+    <tr>
+      <td>${esc_(l.cliente)}<br><span class="helptext">${esc_(l.municipio||'')}</span></td>
+      <td class="num">${l.qtdSkylack||''}</td>
+      <td class="num">${l.qtdSkyfrota||''}</td>
+      <td class="num">${l.qtdBalanca||''}</td>
+      <td class="num"><strong>${l.totalMaquinas}</strong></td>
+    </tr>
+  `).join('');
+
+  const comObs = linhas.filter(l=>l.obs && l.obs.trim());
+  const obsSectionHTML = (esc_)=>comObs.length ? `
+    <div class="section-title" style="margin-top:18px;">Observações</div>
+    <div class="ficha-grid">
+      ${comObs.map(l=>`<div class="ficha-item"><div class="k">${esc_(l.cliente)}</div><div class="v">${esc_(l.obs).replace(/\n/g,'<br>')}</div></div>`).join('')}
+    </div>
+  ` : '';
+
+  const tableHTML = `
+    <table class="report-table">
+      <thead>
+        <tr>
+          <th>Loja</th><th class="num">Skylack</th><th class="num">Skyfrota</th><th class="num">Balança</th><th class="num">Total Máquinas</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${rowsHTML(esc)}
+        <tr class="report-total-row">
+          <td>Total geral (${linhas.length} loja${linhas.length===1?'':'s'})</td>
+          <td class="num">${totalSkylack}</td>
+          <td class="num">${totalSkyfrota}</td>
+          <td class="num">${totalBalanca}</td>
+          <td class="num">${totalMaquinas}</td>
+        </tr>
+      </tbody>
+    </table>
+    ${obsSectionHTML(esc)}
+  `;
+
+  window.__relatorioData = { linhas, totalSkylack, totalSkyfrota, totalBalanca, totalMaquinas };
+
+  return `
+    <div class="card">
+      <div class="section-title">Relatório de Máquinas e Balanças</div>
+      <div class="form-actions no-print" style="justify-content:flex-start;margin-bottom:12px;">
+        <button class="btn btn-accent btn-sm" onclick="gerarPdfRelatorio()">Gerar PDF</button>
+      </div>
+      ${tableHTML}
+      <div class="helptext no-print" style="margin-top:10px;">O PDF é baixado direto para o seu aparelho — depois é só compartilhar o arquivo com quem precisar.</div>
+    </div>
+  `;
+}
+
+/* ===================== PDF GENERATION (no external libraries) ===================== */
+function pdfAsciiBytes(str){
+  const bytes = [];
+  for(let i=0;i<str.length;i++) bytes.push(str.charCodeAt(i) & 0xFF);
+  return bytes;
+}
+function pdfTextBytes(str){
+  const escaped = String(str).replace(/\\/g,'\\\\').replace(/\(/g,'\\(').replace(/\)/g,'\\)');
+  const bytes = [];
+  for(let i=0;i<escaped.length;i++){
+    let c = escaped.charCodeAt(i);
+    if(c>255) c = 63; // fallback '?' for unsupported characters
+    bytes.push(c);
+  }
+  return bytes;
+}
+function buildPdfBytes(pagesOps){
+  const numPages = pagesOps.length;
+  let nextNum = 1;
+  const catalogNum = nextNum++;
+  const pagesNum = nextNum++;
+  const pageNums = []; for(let i=0;i<numPages;i++) pageNums.push(nextNum++);
+  const contentNums = []; for(let i=0;i<numPages;i++) contentNums.push(nextNum++);
+  const fontRegNum = nextNum++;
+  const fontBoldNum = nextNum++;
+
+  function obj(num, bodyBytes){
+    return pdfAsciiBytes(num+' 0 obj\n').concat(bodyBytes, pdfAsciiBytes('\nendobj\n'));
+  }
+
+  const allObjs = {};
+  allObjs[catalogNum] = obj(catalogNum, pdfAsciiBytes('<< /Type /Catalog /Pages '+pagesNum+' 0 R >>'));
+  const kids = pageNums.map(n=>n+' 0 R').join(' ');
+  allObjs[pagesNum] = obj(pagesNum, pdfAsciiBytes('<< /Type /Pages /Kids ['+kids+'] /Count '+numPages+' >>'));
+
+  for(let i=0;i<numPages;i++){
+    const pnum = pageNums[i], cnum = contentNums[i];
+    const pageDict = '<< /Type /Page /Parent '+pagesNum+' 0 R /MediaBox [0 0 595 842] '+
+      '/Resources << /Font << /F1 '+fontRegNum+' 0 R /F2 '+fontBoldNum+' 0 R >> >> /Contents '+cnum+' 0 R >>';
+    allObjs[pnum] = obj(pnum, pdfAsciiBytes(pageDict));
+
+    let streamBytes = [];
+    pagesOps[i].forEach(op=>{
+      const fontName = op.bold ? 'F2' : 'F1';
+      const size = op.size || 9;
+      streamBytes = streamBytes.concat(pdfAsciiBytes('BT /'+fontName+' '+size+' Tf 1 0 0 1 '+op.x+' '+op.y+' Tm ('));
+      streamBytes = streamBytes.concat(pdfTextBytes(op.text));
+      streamBytes = streamBytes.concat(pdfAsciiBytes(') Tj ET\n'));
+    });
+    const streamHeader = pdfAsciiBytes('<< /Length '+streamBytes.length+' >>\nstream\n');
+    const streamFooter = pdfAsciiBytes('\nendstream');
+    allObjs[cnum] = obj(cnum, streamHeader.concat(streamBytes, streamFooter));
+  }
+
+  allObjs[fontRegNum] = obj(fontRegNum, pdfAsciiBytes('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>'));
+  allObjs[fontBoldNum] = obj(fontBoldNum, pdfAsciiBytes('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>'));
+
+  let fileBytes = pdfAsciiBytes('%PDF-1.4\n');
+  const offsets = {};
+  const allNums = [catalogNum, pagesNum].concat(pageNums, contentNums, [fontRegNum, fontBoldNum]).sort((a,b)=>a-b);
+  allNums.forEach(num=>{
+    offsets[num] = fileBytes.length;
+    fileBytes = fileBytes.concat(allObjs[num]);
+  });
+
+  const xrefStart = fileBytes.length;
+  const maxNum = allNums[allNums.length-1];
+  let xref = 'xref\n0 '+(maxNum+1)+'\n0000000000 65535 f \n';
+  for(let n=1;n<=maxNum;n++){
+    xref += String(offsets[n]).padStart(10,'0')+' 00000 n \n';
+  }
+  fileBytes = fileBytes.concat(pdfAsciiBytes(xref));
+  fileBytes = fileBytes.concat(pdfAsciiBytes('trailer\n<< /Size '+(maxNum+1)+' /Root '+catalogNum+' 0 R >>\nstartxref\n'+xrefStart+'\n%%EOF'));
+
+  return new Uint8Array(fileBytes);
+}
+function downloadPdfBytes(bytes, filename){
+  const blob = new Blob([bytes], {type:'application/pdf'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url), 4000);
+}
+
+function gerarPdfRelatorio(){
+  const data = window.__relatorioData;
+  if(!data || !data.linhas.length){ toast('Nada para gerar ainda.'); return; }
+
+  const marginX = 40;
+  const pageTop = 790, pageBottom = 50;
+  const lineH = 15;
+  const colX = { loja:marginX, skylack:320, skyfrota:390, balanca:460, total:520 };
+
+  let pages = [];
+  let currentOps = [];
+  let y = pageTop;
+
+  function push(x, yy, text, opts){
+    currentOps.push({x:x, y:yy, text:text, size:(opts&&opts.size)||9, bold: !!(opts&&opts.bold)});
+  }
+  function drawTableHeader(){
+    push(colX.loja, y, 'Loja', {bold:true});
+    push(colX.skylack, y, 'Skylack', {bold:true});
+    push(colX.skyfrota, y, 'Skyfrota', {bold:true});
+    push(colX.balanca, y, 'Balanca', {bold:true});
+    push(colX.total, y, 'Tot. Maq.', {bold:true});
+    y -= lineH;
+  }
+  function newPage(withHeader){
+    pages.push(currentOps);
+    currentOps = [];
+    y = pageTop;
+    if(withHeader) drawTableHeader();
+  }
+  function ensureSpace(needed, withHeader){
+    if(y - needed < pageBottom){ newPage(withHeader); }
+  }
+
+  push(marginX, y, 'Relatorio de Maquinas e Balancas', {size:15, bold:true});
+  y -= 20;
+  push(marginX, y, 'Rota Norte - Belem / Para', {size:9});
+  y -= 24;
+  drawTableHeader();
+
+  data.linhas.forEach(l=>{
+    ensureSpace(lineH, true);
+    push(colX.loja, y, String(l.cliente).slice(0,40));
+    push(colX.skylack, y, l.qtdSkylack ? String(l.qtdSkylack) : '-');
+    push(colX.skyfrota, y, l.qtdSkyfrota ? String(l.qtdSkyfrota) : '-');
+    push(colX.balanca, y, l.qtdBalanca ? String(l.qtdBalanca) : '-');
+    push(colX.total, y, String(l.totalMaquinas), {bold:true});
+    y -= lineH;
+  });
+
+  ensureSpace(lineH*2, false);
+  y -= 6;
+  push(colX.loja, y, 'Total geral ('+data.linhas.length+' loja'+(data.linhas.length===1?'':'s')+')', {bold:true});
+  push(colX.skylack, y, String(data.totalSkylack), {bold:true});
+  push(colX.skyfrota, y, String(data.totalSkyfrota), {bold:true});
+  push(colX.balanca, y, String(data.totalBalanca), {bold:true});
+  push(colX.total, y, String(data.totalMaquinas), {bold:true});
+  y -= 28;
+
+  const comObs = data.linhas.filter(l=>l.obs && l.obs.trim());
+  if(comObs.length){
+    ensureSpace(24, false);
+    push(marginX, y, 'Observacoes', {size:12, bold:true});
+    y -= 18;
+    comObs.forEach(l=>{
+      ensureSpace(14, false);
+      push(marginX, y, l.cliente, {bold:true});
+      y -= 12;
+      const words = String(l.obs).replace(/\r/g,'').split(/\s+/);
+      let line = '', wrapped = [];
+      words.forEach(w=>{
+        if((line+' '+w).trim().length > 95){ wrapped.push(line.trim()); line = w; }
+        else line = (line+' '+w).trim();
+      });
+      if(line) wrapped.push(line);
+      wrapped.forEach(ln=>{
+        ensureSpace(12, false);
+        push(marginX, y, ln);
+        y -= 12;
+      });
+      y -= 8;
+    });
+  }
+  pages.push(currentOps);
+
+  const bytes = buildPdfBytes(pages);
+  downloadPdfBytes(bytes, 'relatorio_maquinas_balancas.pdf');
+  toast('PDF gerado.');
+}
+
+/* ===================== INIT ===================== */
+async function initApp(){
+  renderTabs();
+  document.getElementById('content').innerHTML = '<div class="card"><div class="empty-state">Carregando cadastro…</div></div>';
+  await ensureSeeded();
+  renderContent();
+}
+initApp();
+</script>
+</body>
+</html>
